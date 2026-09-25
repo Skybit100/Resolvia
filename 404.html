@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Página no encontrada | RESOLVIA</title>
+  <meta name="description" content="La página que buscas no existe. Regresa al inicio de RESOLVIA.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#2C2B2B">
+
+  <!--
+    GitHub Pages sirve este 404 en cualquier ruta inexistente (incluso anidada),
+    así que las rutas relativas necesitan una base fija:
+    - dominio propio (resolvia.com.mx)        → base "/"
+    - usuario.github.io/repositorio/...        → base "/repositorio/"
+    Script de configuración justificado: debe ejecutarse antes de cargar CSS.
+  -->
+  <script>
+    (function () {
+      var host = location.hostname;
+      var first = location.pathname.split("/")[1] || "";
+      var base = /\.github\.io$/.test(host) && first ? "/" + first + "/" : "/";
+      document.write('<base href="' + base + '">');
+    })();
+  </script>
+
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- HEADER -->
+  <header class="site-header site-header--static" data-header>
+    <div class="site-header__inner container">
+      <a class="site-header__logo" href="./" aria-label="RESOLVIA, ir al inicio">
+        <picture>
+          <source srcset="assets/logos/resolvia-dark.webp" type="image/webp">
+          <img src="assets/logos/resolvia-dark.png" alt="RESOLVIA" width="520" height="159">
+        </picture>
+      </a>
+      <a class="back-link" href="./">
+        <svg class="icon icon--back" aria-hidden="true"><use href="assets/icons/icons.svg#i-arrow"></use></svg>
+        Inicio
+      </a>
+    </div>
+  </header>
+
+  <main id="main" class="page-simple">
+    <div class="container notfound">
+      <p class="notfound__code">Error 404</p>
+      <h1>Esta página no existe.</h1>
+      <p>Lo que sí existe es un camino claro de regreso. Si necesitas resolver algo, cuéntanos.</p>
+      <div class="hero__actions">
+        <a class="btn btn--dark" href="./">
+          Ir al inicio
+          <svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-arrow"></use></svg>
+        </a>
+        <a class="btn btn--ghost" href="./#contacto">Contacto</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container site-footer__bottom">
+      <p>© 2026 RESOLVIA. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

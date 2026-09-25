@@ -1,0 +1,14 @@
+{
+  "name": "RESOLVIA",
+  "short_name": "RESOLVIA",
+  "description": "Proyectos, mantenimiento, remodelación y soluciones técnicas. De principio a fin.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "browser",
+  "background_color": "#F7F4EF",
+  "theme_color": "#2C2B2B",
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
