@@ -953,6 +953,23 @@ body.is-locked {
   margin: 0 0 var(--space-5);
 }
 
+/* Fotografía real (2017×780): proporción propia, completa, sin recorte */
+.clarity__photo {
+  aspect-ratio: 2017 / 780;
+}
+
+/* Móvil: la imagen usa todo el ancho de la pantalla para ganar tamaño */
+@media (max-width: 599px) {
+  .clarity__media {
+    margin-inline: calc(var(--gutter) * -1);
+  }
+
+  .clarity__photo {
+    border-inline: 0;
+    border-radius: 0;
+  }
+}
+
 .docs {
   display: grid;
   gap: var(--space-4);
