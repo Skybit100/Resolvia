@@ -360,6 +360,8 @@
       submitBtn.disabled = true;
       setStatus("Enviando…");
       data.delete("privacidad");
+      data.set("_subject", `Contacto desde el sitio · ${data.get("nombre")}`);
+      if (data.get("correo")) data.set("_replyto", data.get("correo"));
 
       try {
         const response = await fetch(endpoint, {

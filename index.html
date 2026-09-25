@@ -700,12 +700,11 @@
 
         <!--
           FORMULARIO
-          GitHub Pages no ejecuta código de servidor. Para recibir los mensajes,
-          conecta un servicio para sitios estáticos (p. ej. Formspree) y pega su
-          URL en data-endpoint. Mientras esté vacío, el formulario abre el correo
+          GitHub Pages no ejecuta código de servidor. Los mensajes se reciben con
+          Formspree (data-endpoint). Si se deja vacío, el formulario abre el correo
           del visitante con el mensaje ya redactado (no simula un envío).
         -->
-        <form class="form" data-contact-form data-endpoint="" action="mailto:contacto@resolvia.com.mx" method="post" enctype="text/plain" novalidate>
+        <form class="form" data-contact-form data-endpoint="https://formspree.io/f/xwlpnaqj" action="https://formspree.io/f/xwlpnaqj" method="post" novalidate>
           <div class="form__row form__row--2">
             <div class="field">
               <label class="field__label" for="f-nombre">Nombre <span class="field__req" aria-hidden="true">*</span></label>
