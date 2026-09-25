@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
   <!-- ===== SEO ===== -->
-  <title>RESOLVIA | Proyectos, Remodelación y Mantenimiento en CDMX</title>
-  <meta name="description" content="Proyectos, remodelación, mantenimiento y soluciones técnicas con seguimiento y un responsable de principio a fin. RESOLVIA · Ciudad de México.">
+  <title>RESOLVIA | Remodelación, Mantenimiento y Proyectos en CDMX</title>
+  <meta name="description" content="Remodelación, mantenimiento de inmuebles, reparaciones y soluciones técnicas en CDMX y Zona Metropolitana. Alcance claro, seguimiento documentado y un responsable de principio a fin.">
   <link rel="canonical" href="https://resolvia.com.mx/">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#2C2B2B">
@@ -17,7 +17,7 @@
   <meta property="og:locale" content="es_MX">
   <meta property="og:site_name" content="RESOLVIA">
   <meta property="og:title" content="RESOLVIA — De principio a fin.">
-  <meta property="og:description" content="Proyectos, mantenimiento, remodelación y soluciones técnicas.">
+  <meta property="og:description" content="Remodelación, mantenimiento, soluciones técnicas y proyectos en CDMX y Zona Metropolitana. Claro desde el inicio.">
   <meta property="og:url" content="https://resolvia.com.mx/">
   <meta property="og:image" content="https://resolvia.com.mx/assets/images/resolvia-og.jpg">
   <meta property="og:image:width" content="1200">
@@ -27,7 +27,7 @@
   <!-- ===== Twitter Cards ===== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="RESOLVIA — De principio a fin.">
-  <meta name="twitter:description" content="Proyectos, mantenimiento, remodelación y soluciones técnicas.">
+  <meta name="twitter:description" content="Remodelación, mantenimiento, soluciones técnicas y proyectos en CDMX y Zona Metropolitana.">
   <meta name="twitter:image" content="https://resolvia.com.mx/assets/images/resolvia-og.jpg">
 
   <!-- ===== Favicon ===== -->
@@ -42,6 +42,7 @@
 
   <!-- ===== Recursos críticos ===== -->
   <link rel="preload" href="assets/fonts/manrope-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/images/resolvia-01-hero-resolvemos.jpg" as="image" fetchpriority="high">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -56,7 +57,7 @@
     "@id": "https://resolvia.com.mx/#organizacion",
     "name": "RESOLVIA",
     "slogan": "De principio a fin.",
-    "description": "Proyectos, remodelación, mantenimiento y soluciones técnicas con seguimiento y un responsable de principio a fin.",
+    "description": "Remodelación, mantenimiento de inmuebles, reparaciones, soluciones técnicas y proyectos con alcance claro, seguimiento documentado y un responsable.",
     "url": "https://resolvia.com.mx/",
     "logo": "https://resolvia.com.mx/assets/logos/resolvia-logo-1200.png",
     "image": "https://resolvia.com.mx/assets/images/resolvia-og.jpg",
@@ -68,18 +69,19 @@
       "addressRegion": "CDMX",
       "addressCountry": "MX"
     },
-    "areaServed": {
-      "@type": "City",
-      "name": "Ciudad de México"
-    },
+    "areaServed": [
+      { "@type": "City", "name": "Ciudad de México" },
+      { "@type": "AdministrativeArea", "name": "Zona Metropolitana del Valle de México" }
+    ],
     "knowsAbout": [
-      "Gestión de proyectos",
       "Remodelación de oficinas",
-      "Remodelación comercial",
-      "Remodelación de escuelas",
-      "Mantenimiento preventivo y correctivo",
       "Adecuación de espacios",
-      "Soluciones técnicas"
+      "Mantenimiento de inmuebles",
+      "Mantenimiento preventivo",
+      "Mantenimiento correctivo",
+      "Reparación de inmuebles",
+      "Soluciones técnicas",
+      "Coordinación de proyectos"
     ]
   }
   </script>
@@ -119,16 +121,16 @@
         <ul class="site-nav__list" role="list">
           <li><a class="site-nav__link" href="#inicio">Inicio</a></li>
           <li><a class="site-nav__link" href="#soluciones">Soluciones</a></li>
-          <li><a class="site-nav__link" href="#proceso">Cómo trabajamos</a></li>
-          <li><a class="site-nav__link" href="#proyectos">Proyectos</a></li>
-          <li><a class="site-nav__link" href="#nosotros">Nosotros</a></li>
+          <li><a class="site-nav__link" href="#metodo">Método</a></li>
+          <li><a class="site-nav__link" href="#seguimiento">Seguimiento</a></li>
           <li><a class="site-nav__link" href="#contacto">Contacto</a></li>
         </ul>
       </nav>
 
-      <a class="btn btn--dark btn--sm site-header__cta" href="#contacto">
-        <span class="site-header__cta-long">Cuéntanos qué necesitas resolver</span>
-        <span class="site-header__cta-short">Cuéntanos</span>
+      <a class="btn btn--dark btn--sm site-header__cta" href="https://wa.me/525533101723?text=Hola%2C%20contacto%20a%20RESOLVIA%20porque%20necesito%20ayuda%20con%20un%20proyecto." target="_blank" rel="noopener" data-whatsapp>
+        <svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-chat"></use></svg>
+        <span class="site-header__cta-long">Hablar con RESOLVIA</span>
+        <span class="site-header__cta-short">WhatsApp</span>
       </a>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
@@ -143,14 +145,16 @@
         <ol class="mobile-menu__list" role="list">
           <li><a href="#inicio"><span class="mobile-menu__num">01</span>Inicio</a></li>
           <li><a href="#soluciones"><span class="mobile-menu__num">02</span>Soluciones</a></li>
-          <li><a href="#proceso"><span class="mobile-menu__num">03</span>Cómo trabajamos</a></li>
-          <li><a href="#proyectos"><span class="mobile-menu__num">04</span>Proyectos</a></li>
-          <li><a href="#nosotros"><span class="mobile-menu__num">05</span>Nosotros</a></li>
-          <li><a href="#contacto"><span class="mobile-menu__num">06</span>Contacto</a></li>
+          <li><a href="#metodo"><span class="mobile-menu__num">03</span>Método</a></li>
+          <li><a href="#seguimiento"><span class="mobile-menu__num">04</span>Seguimiento</a></li>
+          <li><a href="#contacto"><span class="mobile-menu__num">05</span>Contacto</a></li>
         </ol>
       </nav>
       <div class="mobile-menu__footer">
-        <a class="btn btn--primary btn--block" href="#contacto">Cuéntanos qué necesitas resolver</a>
+        <a class="btn btn--primary btn--block" href="https://wa.me/525533101723?text=Hola%2C%20contacto%20a%20RESOLVIA%20porque%20necesito%20ayuda%20con%20un%20proyecto." target="_blank" rel="noopener" data-whatsapp>
+          <svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-chat"></use></svg>
+          Hablar por WhatsApp
+        </a>
         <a class="mobile-menu__contact" href="tel:+525533101723">+52 55 3310 1723</a>
         <a class="mobile-menu__contact" href="mailto:contacto@resolvia.com.mx">contacto@resolvia.com.mx</a>
       </div>
@@ -161,11 +165,12 @@
 
     <!-- ===================================================================
          HERO
+         Qué hacemos · cómo trabajamos · cómo contactarnos, en 5 segundos.
          =================================================================== -->
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="hero__grid container">
         <div class="hero__content">
-          <p class="eyebrow hero__eyebrow">Proyectos · Mantenimiento · Remodelación · Soluciones técnicas</p>
+          <p class="eyebrow hero__eyebrow">CDMX y Zona Metropolitana</p>
 
           <h1 class="hero__title" id="hero-title">
             <span class="hero__title-main">Resolvemos<span class="accent-dot">.</span></span>
@@ -173,193 +178,95 @@
           </h1>
 
           <p class="hero__lead">
-            Proyectos, mantenimiento, remodelación y soluciones técnicas
-            con alcance claro, seguimiento y un responsable hasta la entrega.
+            Remodelación, mantenimiento, reparaciones y soluciones técnicas.
+            Coordinamos y ejecutamos el trabajo; tú sabes qué se hará, cuánto cuesta y quién responde.
           </p>
+
+          <p class="hero__prompt">¿Tienes algo que resolver? Cuéntanos o envíanos fotografías.</p>
 
           <div class="hero__actions">
-            <a class="btn btn--dark" href="#contacto">
-              Cuéntanos qué necesitas resolver
-              <svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-arrow"></use></svg>
+            <a class="btn btn--dark" href="https://wa.me/525533101723?text=Hola%2C%20contacto%20a%20RESOLVIA%20porque%20necesito%20ayuda%20con%20un%20proyecto." target="_blank" rel="noopener" data-whatsapp>
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-chat"></use></svg>
+              Hablar con RESOLVIA
             </a>
-            <a class="btn btn--ghost" href="#proceso">Conoce cómo trabajamos</a>
+            <a class="btn btn--ghost" href="#metodo">Ver cómo trabajamos</a>
           </div>
-
-          <p class="hero__note">
-            <span class="hero__note-mark" aria-hidden="true"></span>
-            Ciudad de México · Proyectos corporativos, comerciales, educativos e inmobiliarios
-          </p>
         </div>
 
-        <!--
-          FOTOGRAFÍA PRINCIPAL
-          Reemplaza el bloque .media-placeholder por una fotografía real de obra:
-          <picture>
-            <source srcset="assets/images/hero/hero.avif" type="image/avif">
-            <source srcset="assets/images/hero/hero.webp" type="image/webp">
-            <img src="assets/images/hero/hero.jpg" alt="Describe la obra real" width="1200" height="1500" fetchpriority="high">
-          </picture>
-        -->
+        <!-- IMAGEN 01 · RESOLVEMOS (above the fold: sin lazy, carga prioritaria) -->
         <figure class="hero__media">
-          <div class="media-placeholder media-placeholder--plan" role="img" aria-label="Espacio reservado para fotografía de obra real">
-            <svg class="plan" viewBox="0 0 480 600" aria-hidden="true" focusable="false">
-              <!-- Muros exteriores -->
-              <path class="plan__wall" d="M60 90H420V510H60Z"/>
-              <!-- Divisiones -->
-              <path class="plan__part" d="M60 300H230M290 300H420M230 90V240M230 360V510M330 300V510"/>
-              <!-- Puertas -->
-              <path class="plan__door" d="M230 240A60 60 0 0 1 290 300M290 300H230"/>
-              <path class="plan__door" d="M330 420A40 40 0 0 0 370 460"/>
-              <!-- Zona resuelta -->
-              <path class="plan__zone" d="M240 310H320V500H240Z"/>
-              <path class="plan__check" d="M262 402l14 14 26-30"/>
-              <!-- Cotas -->
-              <path class="plan__dim" d="M60 60H420M60 52V68M420 52V68"/>
-              <path class="plan__dim" d="M450 90V510M442 90H458M442 510H458"/>
-              <text class="plan__label" x="240" y="48" text-anchor="middle">9.00 m</text>
-              <text class="plan__label" x="466" y="304" transform="rotate(90 466 304)" text-anchor="middle">10.50 m</text>
-              <!-- Referencias -->
-              <text class="plan__tag" x="76" y="118">A-01</text>
-              <text class="plan__tag" x="246" y="118">A-02</text>
-              <text class="plan__tag" x="76" y="328">A-03</text>
-              <text class="plan__tag" x="346" y="328">A-05</text>
-              <text class="plan__tag plan__tag--accent" x="248" y="328">A-04</text>
-            </svg>
-          </div>
-          <figcaption class="media-caption">
-            <span>Fotografía de obra real</span>
-            <span class="media-caption__status">Pendiente</span>
-          </figcaption>
+          <img class="photo" src="assets/images/resolvia-01-hero-resolvemos.jpg"
+               alt="Proyecto de remodelación y mantenimiento coordinado por Resolvia"
+               width="1376" height="768" fetchpriority="high" decoding="async">
         </figure>
       </div>
 
-      <a class="hero__scroll" href="#enfoque" aria-label="Continuar a la siguiente sección">
+      <a class="hero__scroll" href="#soluciones" aria-label="Continuar a Soluciones">
         <svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-arrow-down"></use></svg>
       </a>
     </section>
 
     <!-- ===================================================================
-         TRANSICIÓN DE MARCA
-         =================================================================== -->
-    <section class="statement section" id="enfoque" aria-labelledby="statement-title">
-      <div class="container">
-        <h2 class="statement__title" id="statement-title" data-reveal>
-          <span>Un problema.</span>
-          <span>Un responsable.</span>
-          <span class="statement__accent">Una solución.</span>
-        </h2>
-
-        <span class="draw-line" data-reveal aria-hidden="true"></span>
-
-        <div class="statement__body">
-          <p class="lead" data-reveal>
-            Ejecutar un proyecto no debería significar perseguir proveedores,
-            coordinar trabajadores y resolver personalmente cada imprevisto.
-          </p>
-          <p data-reveal>
-            En <strong>RESOLVIA</strong> integramos planeación, coordinación, ejecución y
-            seguimiento para llevar cada necesidad hasta su solución.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         VALUE PROPOSITION
-         =================================================================== -->
-    <section class="value section section--alt" aria-labelledby="value-title">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow">Propuesta de valor</p>
-          <h2 class="section-title" id="value-title" data-reveal>El proyecto debe sentirse bajo control.</h2>
-        </header>
-
-        <ol class="value__grid" role="list">
-          <li class="value__item" data-reveal>
-            <span class="value__num">01</span>
-            <h3 class="value__title">Alcance claro</h3>
-            <p>Definimos qué se hará antes de comenzar.</p>
-          </li>
-          <li class="value__item" data-reveal>
-            <span class="value__num">02</span>
-            <h3 class="value__title">Presupuesto claro</h3>
-            <p>Sabes qué estás contratando y cómo se compone.</p>
-          </li>
-          <li class="value__item" data-reveal>
-            <span class="value__num">03</span>
-            <h3 class="value__title">Seguimiento</h3>
-            <p>Documentamos avances, decisiones y cambios.</p>
-          </li>
-          <li class="value__item" data-reveal>
-            <span class="value__num">04</span>
-            <h3 class="value__title">Un responsable</h3>
-            <p>Un punto de contacto de principio a fin.</p>
-          </li>
-        </ol>
-
-        <p class="value__close" data-reveal>
-          <span>Menos incertidumbre.</span>
-          <span>Más control<span class="accent-dot">.</span></span>
-        </p>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         SERVICES
+         SERVICES — Qué resolvemos (4 pilares; la gestión es transversal)
          =================================================================== -->
     <section class="services section" id="soluciones" aria-labelledby="services-title">
       <div class="container">
         <header class="section-head section-head--split">
           <div>
             <p class="eyebrow">Soluciones</p>
-            <h2 class="section-title" id="services-title" data-reveal>Lo que necesites resolver.</h2>
+            <h2 class="section-title" id="services-title" data-reveal>Qué resolvemos.</h2>
           </div>
+          <p class="section-head__aside" data-reveal>
+            Una reparación puntual, la mejora de un espacio o una remodelación completa.
+            El tamaño cambia; el método no.
+          </p>
         </header>
 
-        <ul class="services__list" role="list">
-          <li class="service" data-reveal>
-            <span class="service__num">01</span>
-            <h3 class="service__title">Proyectos</h3>
-            <p class="service__text">Planeación, coordinación y ejecución de proyectos.</p>
+        <ul class="pillars" role="list">
+          <li class="pillar" data-reveal>
+            <span class="pillar__num">01</span>
+            <h3 class="pillar__title">Remodelación</h3>
+            <p class="pillar__text">Adecuaciones y renovación de espacios residenciales, comerciales, corporativos y educativos.</p>
           </li>
-          <li class="service" data-reveal>
-            <span class="service__num">02</span>
-            <h3 class="service__title">Remodelación</h3>
-            <p class="service__text">Transformación y adecuación de espacios corporativos, comerciales, educativos e inmobiliarios.</p>
+          <li class="pillar" data-reveal>
+            <span class="pillar__num">02</span>
+            <h3 class="pillar__title">Mantenimiento</h3>
+            <p class="pillar__text">Mantenimiento preventivo y correctivo, reparaciones y conservación de inmuebles.</p>
           </li>
-          <li class="service" data-reveal>
-            <span class="service__num">03</span>
-            <h3 class="service__title">Mantenimiento</h3>
-            <p class="service__text">Mantenimiento preventivo y correctivo para conservar espacios seguros, funcionales y operativos.</p>
+          <li class="pillar" data-reveal>
+            <span class="pillar__num">03</span>
+            <h3 class="pillar__title">Soluciones técnicas</h3>
+            <p class="pillar__text">Instalaciones, infraestructura, automatización, diagnóstico y solución de problemas específicos.</p>
           </li>
-          <li class="service" data-reveal>
-            <span class="service__num">04</span>
-            <h3 class="service__title">Soluciones técnicas</h3>
-            <p class="service__text">Diagnóstico y resolución de necesidades relacionadas con instalaciones, infraestructura, acabados y operación.</p>
-          </li>
-          <li class="service" data-reveal>
-            <span class="service__num">05</span>
-            <h3 class="service__title">Gestión integral</h3>
-            <p class="service__text">Coordinación de materiales, proveedores, especialistas, calendario, avances y entrega.</p>
+          <li class="pillar" data-reveal>
+            <span class="pillar__num">04</span>
+            <h3 class="pillar__title">Proyectos</h3>
+            <p class="pillar__text">Planeación, coordinación, ejecución y entrega de trabajos que requieren diferentes especialidades.</p>
           </li>
         </ul>
 
-        <blockquote class="services__quote" data-reveal>
-          <p>“No importa si comienza con una reparación o con un proyecto completo. Nuestro trabajo es llevarlo hasta la solución.”</p>
-        </blockquote>
+        <p class="pillars__note" data-reveal>
+          <span class="pillars__mark" aria-hidden="true"></span>
+          Todo coordinado por RESOLVIA, de principio a fin.
+        </p>
       </div>
     </section>
 
     <!-- ===================================================================
-         PROCESS
+         PROCESS — El método RESOLVIA (6 etapas)
+         Horizontal en escritorio, secuencia vertical en móvil.
          =================================================================== -->
-    <section class="process section section--alt" id="proceso" aria-labelledby="process-title">
+    <section class="process section section--alt" id="metodo" aria-labelledby="process-title">
       <div class="container">
         <header class="section-head">
-          <p class="eyebrow">Cómo trabajamos</p>
-          <h2 class="section-title" id="process-title" data-reveal>
-            Un proceso claro.<br>De principio a fin.
+          <p class="eyebrow">El método RESOLVIA</p>
+          <h2 class="section-title section-title--wide" id="process-title" data-reveal>
+            Las cosas claras desde el principio.
           </h2>
+          <p class="section-head__lead" data-reveal>
+            Antes de empezar sabes qué vamos a hacer, cómo lo vamos a hacer
+            y qué puedes esperar del proyecto.
+          </p>
         </header>
 
         <div class="timeline" data-timeline>
@@ -371,126 +278,309 @@
             <li class="step" data-step>
               <span class="step__node" aria-hidden="true"></span>
               <span class="step__num">01</span>
-              <h3 class="step__title">Diagnóstico</h3>
-              <p class="step__text">Entendemos la necesidad y levantamos información.</p>
+              <h3 class="step__title">Entendemos</h3>
+              <p class="step__text">Escuchamos la necesidad, revisamos el problema y recopilamos la información necesaria.</p>
             </li>
             <li class="step" data-step>
               <span class="step__node" aria-hidden="true"></span>
               <span class="step__num">02</span>
-              <h3 class="step__title">Alcance</h3>
-              <p class="step__text">Definimos qué debe resolverse.</p>
+              <h3 class="step__title">Definimos</h3>
+              <p class="step__text">Delimitamos alcance, actividades, materiales, tiempos, costos y consideraciones.</p>
             </li>
             <li class="step" data-step>
               <span class="step__node" aria-hidden="true"></span>
               <span class="step__num">03</span>
-              <h3 class="step__title">Propuesta</h3>
-              <p class="step__text">Alcance + presupuesto + calendario.</p>
+              <h3 class="step__title">Proponemos</h3>
+              <p class="step__text">Presentamos una solución clara antes de comenzar.</p>
             </li>
             <li class="step" data-step>
               <span class="step__node" aria-hidden="true"></span>
               <span class="step__num">04</span>
-              <h3 class="step__title">Ejecución</h3>
-              <p class="step__text">Coordinamos personas, materiales, proveedores y trabajos.</p>
+              <h3 class="step__title">Ejecutamos</h3>
+              <p class="step__text">Coordinamos los trabajos y los especialistas necesarios.</p>
             </li>
             <li class="step" data-step>
               <span class="step__node" aria-hidden="true"></span>
               <span class="step__num">05</span>
-              <h3 class="step__title">Entrega</h3>
-              <p class="step__text">Validamos, documentamos y cerramos.</p>
+              <h3 class="step__title">Informamos</h3>
+              <p class="step__text">Documentamos avances, evidencias y cualquier cambio relevante.</p>
+            </li>
+            <li class="step" data-step>
+              <span class="step__node" aria-hidden="true"></span>
+              <span class="step__num">06</span>
+              <h3 class="step__title">Entregamos</h3>
+              <p class="step__text">Revisamos el resultado y cerramos el trabajo contigo.</p>
             </li>
           </ol>
         </div>
+      </div>
+    </section>
 
-        <p class="process__close" data-reveal>
-          <span>Cada etapa tiene un responsable.</span>
-          <span>Cada decisión tiene seguimiento.</span>
+    <!-- ===================================================================
+         CONTROL — Así mantenemos tu proyecto bajo control
+         Maquetas en HTML/CSS de los documentos de trabajo.
+         Información ficticia: no usar datos de clientes reales.
+         =================================================================== -->
+    <section class="control section" id="seguimiento" aria-labelledby="control-title">
+      <div class="container">
+        <div class="media-split media-split--image-first">
+          <!-- IMAGEN 02 · PLANEAMOS Y CONTROLAMOS -->
+          <figure class="media-split__media" data-reveal>
+            <img class="photo" src="assets/images/resolvia-02-metodo-control.jpg"
+                 alt="Planeación y seguimiento de proyectos con el método Resolvia"
+                 width="1376" height="768" loading="lazy" decoding="async">
+          </figure>
+          <div class="media-split__content">
+            <p class="eyebrow">Seguimiento</p>
+            <h2 class="section-title" id="control-title" data-reveal>Así mantenemos tu proyecto bajo control.</h2>
+            <p class="media-split__text" data-reveal>
+              Detrás de cada trabajo hay planeación: diagnóstico, alcance, cotización,
+              cronograma, evidencias, control de cambios y cierre. Todo queda documentado.
+            </p>
+          </div>
+        </div>
+
+        <div class="docs">
+          <!-- 01 Propuesta y alcance -->
+          <figure class="doc-card" data-reveal>
+            <div class="doc" aria-hidden="true">
+              <div class="doc__bar">
+                <span class="doc__brand">RESOLVIA</span>
+                <span class="doc__ref">PROPUESTA · 000</span>
+              </div>
+              <p class="doc__heading">Alcance</p>
+              <ul class="doc__lines" role="list">
+                <li><span class="doc__bullet"></span><i></i></li>
+                <li><span class="doc__bullet"></span><i></i></li>
+                <li><span class="doc__bullet"></span><i></i></li>
+              </ul>
+              <div class="doc__split">
+                <div>
+                  <p class="doc__tag doc__tag--in">Incluye</p>
+                  <i></i><i></i>
+                </div>
+                <div>
+                  <p class="doc__tag doc__tag--out">No incluye</p>
+                  <i></i><i></i>
+                </div>
+              </div>
+              <div class="doc__total"><span>Total</span><i></i></div>
+            </div>
+            <figcaption class="doc-card__caption">
+              <span class="doc-card__num">01</span>
+              <strong>Propuesta y alcance</strong>
+              Qué incluye, qué no incluye y cuánto cuesta, antes de empezar.
+            </figcaption>
+          </figure>
+
+          <!-- 02 Plan de trabajo -->
+          <figure class="doc-card" data-reveal>
+            <div class="doc" aria-hidden="true">
+              <div class="doc__bar">
+                <span class="doc__brand">RESOLVIA</span>
+                <span class="doc__ref">PLAN DE TRABAJO</span>
+              </div>
+              <div class="gantt">
+                <div class="gantt__head"><span></span><span>S1</span><span>S2</span><span>S3</span><span>S4</span></div>
+                <div class="gantt__row"><i></i><b class="gantt__bar gantt__bar--1"></b></div>
+                <div class="gantt__row"><i></i><b class="gantt__bar gantt__bar--2"></b></div>
+                <div class="gantt__row"><i></i><b class="gantt__bar gantt__bar--3 is-accent"></b></div>
+                <div class="gantt__row"><i></i><b class="gantt__bar gantt__bar--4"></b></div>
+              </div>
+            </div>
+            <figcaption class="doc-card__caption">
+              <span class="doc-card__num">02</span>
+              <strong>Plan de trabajo</strong>
+              Actividades, responsables y calendario acordados.
+            </figcaption>
+          </figure>
+
+          <!-- 03 Reporte de avance -->
+          <figure class="doc-card" data-reveal>
+            <div class="doc" aria-hidden="true">
+              <div class="doc__bar">
+                <span class="doc__brand">RESOLVIA</span>
+                <span class="doc__ref">REPORTE DE AVANCE</span>
+              </div>
+              <div class="doc__progress"><span>Avance</span><span class="doc__meter"><b></b></span></div>
+              <div class="doc__photos"><span></span><span></span><span></span></div>
+              <ul class="doc__checks" role="list">
+                <li class="is-done"><i></i></li>
+                <li class="is-done"><i></i></li>
+                <li><i></i></li>
+              </ul>
+            </div>
+            <figcaption class="doc-card__caption">
+              <span class="doc-card__num">03</span>
+              <strong>Avances y evidencia</strong>
+              Fotografías, actividades terminadas y cambios comunicados.
+            </figcaption>
+          </figure>
+
+          <!-- 04 Acta de entrega -->
+          <figure class="doc-card" data-reveal>
+            <div class="doc" aria-hidden="true">
+              <div class="doc__bar">
+                <span class="doc__brand">RESOLVIA</span>
+                <span class="doc__ref">ACTA DE ENTREGA</span>
+              </div>
+              <ul class="doc__checks" role="list">
+                <li class="is-done"><i></i></li>
+                <li class="is-done"><i></i></li>
+                <li class="is-done"><i></i></li>
+                <li class="is-done"><i></i></li>
+              </ul>
+              <div class="doc__signs"><span>Cliente</span><span>RESOLVIA</span></div>
+            </div>
+            <figcaption class="doc-card__caption">
+              <span class="doc-card__num">04</span>
+              <strong>Entrega y cierre</strong>
+              Validación del resultado, evidencias y cierre documentado.
+            </figcaption>
+          </figure>
+        </div>
+
+        <p class="docs__note">Ejemplos ilustrativos. Cada proyecto recibe sus propios documentos.</p>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TRUST — Claridad antes, durante y después
+         =================================================================== -->
+    <section class="clarity section section--dark" id="claridad" aria-labelledby="clarity-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow eyebrow--dark">Claridad</p>
+          <h2 class="section-title" id="clarity-title" data-reveal>
+            Sabes qué está pasando en cada momento.
+          </h2>
+        </header>
+
+        <!-- IMAGEN 03 · EJECUTAMOS. Composición completa: sin recorte. -->
+        <figure class="clarity__media" data-reveal>
+          <img class="photo photo--dark" src="assets/images/resolvia-03-antes-durante-despues.jpg"
+               alt="Proceso de trabajo antes, durante y después de una intervención Resolvia"
+               width="1376" height="768" loading="lazy" decoding="async">
+        </figure>
+
+        <div class="phases">
+          <article class="phase" data-reveal>
+            <header class="phase__head">
+              <span class="phase__num">01</span>
+              <h3 class="phase__title">Antes</h3>
+            </header>
+            <ul class="phase__list" role="list">
+              <li>Alcance claro</li>
+              <li>Presupuesto</li>
+              <li>Actividades</li>
+              <li>Tiempos</li>
+              <li>Consideraciones</li>
+            </ul>
+          </article>
+
+          <article class="phase" data-reveal>
+            <header class="phase__head">
+              <span class="phase__num">02</span>
+              <h3 class="phase__title">Durante</h3>
+            </header>
+            <ul class="phase__list" role="list">
+              <li>Seguimiento</li>
+              <li>Avances</li>
+              <li>Evidencia fotográfica</li>
+              <li>Comunicación</li>
+              <li>Control de cambios</li>
+            </ul>
+          </article>
+
+          <article class="phase" data-reveal>
+            <header class="phase__head">
+              <span class="phase__num">03</span>
+              <h3 class="phase__title">Después</h3>
+            </header>
+            <ul class="phase__list" role="list">
+              <li>Validación</li>
+              <li>Evidencias</li>
+              <li>Entrega</li>
+              <li>Cierre</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="clarity__close" data-reveal>
+          <span>No queremos que tengas que perseguir a diferentes proveedores para saber qué está pasando.</span>
+          <strong>RESOLVIA coordina el trabajo y responde por el proyecto.</strong>
         </p>
       </div>
     </section>
 
     <!-- ===================================================================
-         TRUST
+         QUALITY — Bien hecho también está en los detalles (pausa visual)
          =================================================================== -->
-    <section class="trust section section--dark" aria-labelledby="trust-title">
-      <div class="container trust__grid">
-        <div class="trust__intro">
-          <p class="eyebrow eyebrow--dark">Confianza</p>
-          <h2 class="section-title" id="trust-title" data-reveal>
-            La confianza<br>también se construye.
-          </h2>
-          <p class="trust__text" data-reveal>
-            Sabemos que permitir que alguien intervenga tu empresa, escuela,
-            propiedad o espacio requiere confianza.
-          </p>
-          <p class="trust__text" data-reveal>
-            Por eso nuestra forma de trabajar busca reducir incertidumbre
-            desde el primer día.
+    <section class="quality section" id="detalles" aria-labelledby="quality-title">
+      <div class="container media-split media-split--image-first media-split--narrow-media">
+        <!-- IMAGEN 04 · CUIDAMOS LOS DETALLES -->
+        <figure class="media-split__media" data-reveal>
+          <img class="photo" src="assets/images/resolvia-04-detalle-bien-hecho.jpg"
+               alt="Detalle de ejecución y acabados durante un trabajo de Resolvia"
+               width="1376" height="768" loading="lazy" decoding="async">
+        </figure>
+        <div class="media-split__content">
+          <p class="eyebrow">Ejecución</p>
+          <h2 class="section-title section-title--md" id="quality-title" data-reveal>Bien hecho también está en los detalles.</h2>
+          <p class="media-split__text" data-reveal>
+            Cuidamos la ejecución, los acabados y los detalles que hacen que una solución realmente quede resuelta.
           </p>
         </div>
-
-        <ul class="trust__list" role="list">
-          <li class="trust-item" data-reveal>
-            <svg class="trust-item__icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-scope"></use></svg>
-            <span>Alcance definido</span>
-          </li>
-          <li class="trust-item" data-reveal>
-            <svg class="trust-item__icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-budget"></use></svg>
-            <span>Presupuestos claros</span>
-          </li>
-          <li class="trust-item" data-reveal>
-            <svg class="trust-item__icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-log"></use></svg>
-            <span>Seguimiento documentado</span>
-          </li>
-          <li class="trust-item" data-reveal>
-            <svg class="trust-item__icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-evidence"></use></svg>
-            <span>Evidencias de avance</span>
-          </li>
-          <li class="trust-item" data-reveal>
-            <svg class="trust-item__icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-direct"></use></svg>
-            <span>Comunicación directa</span>
-          </li>
-          <li class="trust-item" data-reveal>
-            <svg class="trust-item__icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-changes"></use></svg>
-            <span>Control de cambios</span>
-          </li>
-          <li class="trust-item" data-reveal>
-            <svg class="trust-item__icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-sign"></use></svg>
-            <span>Responsabilidad</span>
-          </li>
-          <li class="trust-item" data-reveal>
-            <svg class="trust-item__icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-handover"></use></svg>
-            <span>Entrega</span>
-          </li>
-        </ul>
       </div>
     </section>
 
     <!-- ===================================================================
-         PROJECTS
-         Cada caso usa el componente .case (ver README → "Agregar un proyecto").
-         No publicar proyectos, clientes, testimonios ni métricas sin autorización.
+         VALUE PROPOSITION — Un problema. Un responsable. Una solución.
          =================================================================== -->
-    <section class="projects section" id="proyectos" aria-labelledby="projects-title">
+    <section class="statement section section--alt" id="enfoque" aria-labelledby="statement-title">
+      <div class="container media-split">
+        <div class="media-split__content">
+          <h2 class="statement__title" id="statement-title" data-reveal>
+            <span>Un problema.</span>
+            <span>Un responsable.</span>
+            <span class="statement__accent">Una solución.</span>
+          </h2>
+          <p class="lead statement__lead" data-reveal>
+            Coordinamos personas, actividades y especialistas para que tú tengas un solo punto de contacto.
+          </p>
+          <blockquote class="statement__quote" data-reveal>
+            <p>Resolver no es solamente ejecutar.</p>
+            <p>Es hacerse responsable de llegar al resultado.</p>
+          </blockquote>
+        </div>
+        <!-- IMAGEN 05 · RESPONDEMOS -->
+        <figure class="media-split__media" data-reveal>
+          <img class="photo" src="assets/images/resolvia-05-responsable-cliente.jpg"
+               alt="Responsable de Resolvia revisando el avance de un proyecto con un cliente"
+               width="1376" height="768" loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         PROJECTS — Trabajos reales (DESACTIVADA)
+         Se activa quitando el atributo `hidden` cuando existan casos reales
+         documentados y autorizados. Ver README → "Agregar un trabajo".
+         No inventar proyectos, clientes, testimonios ni métricas.
+         =================================================================== -->
+    <section class="projects section" id="trabajos" aria-labelledby="projects-title" hidden>
       <div class="container">
         <header class="section-head section-head--split">
           <div>
-            <p class="eyebrow">Proyectos</p>
-            <h2 class="section-title" id="projects-title" data-reveal>Problemas resueltos.</h2>
+            <p class="eyebrow">Trabajos</p>
+            <h2 class="section-title" id="projects-title">Problemas resueltos.</h2>
           </div>
-          <p class="section-head__aside" data-reveal>
-            Cada caso se documenta con el mismo orden con el que trabajamos:
-            qué se necesitaba, cómo se resolvió y qué se entregó.
+          <p class="section-head__aside">
+            Cada caso muestra qué había que resolver, cómo se resolvió y qué se entregó.
           </p>
         </header>
 
-        <ol class="case-model" role="list" aria-label="Modelo de cada caso" data-reveal>
-          <li>Necesidad</li>
-          <li>Solución</li>
-          <li>Resultado</li>
-        </ol>
-
-        <div class="projects__grid" data-projects>
-
+        <div class="projects__grid">
           <!-- ============ PLANTILLA DE CASO (copiar y completar) ============
           <article class="case">
             <div class="case__media">
@@ -510,93 +600,65 @@
               </figure>
             </div>
             <div class="case__body">
-              <p class="case__category">Remodelación</p>
-              <h3 class="case__title">Nombre del proyecto</h3>
+              <p class="case__category">Impermeabilización</p>
+              <h3 class="case__title">Nombre breve del trabajo</h3>
               <dl class="case__meta">
-                <div><dt>Ubicación</dt><dd>Alcaldía, CDMX</dd></div>
-                <div><dt>Duración</dt><dd>0 semanas</dd></div>
-                <div><dt>Alcance</dt><dd>Resumen breve del alcance</dd></div>
+                <div><dt>Ubicación</dt><dd>Alcaldía o municipio</dd></div>
+                <div><dt>Duración</dt><dd>0 días</dd></div>
               </dl>
               <ol class="case__flow" role="list">
-                <li><span class="case__flow-label">Necesidad</span><p>Qué necesitaba resolver el cliente.</p></li>
+                <li><span class="case__flow-label">Problema</span><p>Qué había que resolver.</p></li>
                 <li><span class="case__flow-label">Solución</span><p>Qué hicimos y cómo lo coordinamos.</p></li>
                 <li><span class="case__flow-label">Resultado</span><p>Qué se entregó y cómo quedó documentado.</p></li>
               </ol>
             </div>
           </article>
           ================================================================= -->
-
-          <!-- Estado inicial: sin casos publicados todavía -->
-          <article class="case case--pending" data-reveal>
-            <div class="case__media">
-              <div class="case__photo media-placeholder" role="img" aria-label="Espacio reservado para fotografía del estado inicial">
-                <span class="media-placeholder__label">Antes</span>
-              </div>
-              <div class="case__photo media-placeholder" role="img" aria-label="Espacio reservado para fotografía del resultado">
-                <span class="media-placeholder__label">Después</span>
-              </div>
-            </div>
-            <div class="case__body">
-              <p class="case__category">Caso en documentación</p>
-              <h3 class="case__title">Próximamente publicaremos aquí casos reales.</h3>
-              <ol class="case__flow" role="list">
-                <li><span class="case__flow-label">Necesidad</span><p>Lo que había que resolver.</p></li>
-                <li><span class="case__flow-label">Solución</span><p>Cómo se planeó, coordinó y ejecutó.</p></li>
-                <li><span class="case__flow-label">Resultado</span><p>Lo que se entregó, con evidencia.</p></li>
-              </ol>
-            </div>
-          </article>
-
         </div>
       </div>
     </section>
 
     <!-- ===================================================================
-         ABOUT
+         COMPONENTES PARA CRECER (no activos)
+         Plantillas listas para cuando exista información real que las respalde.
+         Estilos en styles.css → "17. Componentes para crecer".
+
+         Testimonio:
+         <figure class="testimonial">
+           <blockquote><p>Texto real del cliente, con su autorización.</p></blockquote>
+           <figcaption><strong>Nombre</strong> · Cargo, organización</figcaption>
+         </figure>
+
+         Indicador (solo con datos verificables):
+         <div class="metric"><span class="metric__value">00</span><span class="metric__label">Qué mide</span></div>
+
+         Lista de clientes o industrias:
+         <ul class="logo-row" role="list"><li>Nombre</li></ul>
          =================================================================== -->
-    <section class="about section section--alt" id="nosotros" aria-labelledby="about-title">
-      <div class="container about__grid">
-        <div class="about__head">
-          <p class="eyebrow">Nosotros</p>
-          <h2 class="section-title" id="about-title" data-reveal>
-            Resolver bien requiere hacerse responsable.
-          </h2>
-        </div>
-
-        <div class="about__body">
-          <p class="lead" data-reveal>RESOLVIA nace de una idea sencilla: cuando alguien confía un proyecto necesita algo más que proveedores.</p>
-          <p data-reveal>Necesita claridad, seguimiento y alguien que se haga responsable del resultado.</p>
-          <p data-reveal>Por eso integramos planeación, coordinación y ejecución bajo una misma forma de trabajar.</p>
-
-          <blockquote class="about__quote" data-reveal>
-            <p>Resolver no es solamente ejecutar.</p>
-            <p>Es hacerse responsable de llegar al resultado.</p>
-          </blockquote>
-        </div>
-      </div>
-    </section>
 
     <!-- ===================================================================
          CTA
          =================================================================== -->
     <section class="cta section section--dark" aria-labelledby="cta-title" data-cta>
       <div class="container cta__inner">
-        <h2 class="cta__title" id="cta-title">Algo necesita resolverse.</h2>
+        <h2 class="cta__title" id="cta-title">¿Tienes algo que resolver?</h2>
 
         <ul class="cta__needs" role="list">
-          <li>Una remodelación.</li>
           <li>Una reparación.</li>
           <li>Una adecuación.</li>
           <li>Un mantenimiento.</li>
+          <li>Una remodelación.</li>
           <li>Un proyecto completo.</li>
         </ul>
 
         <div class="cta__resolve">
-          <p class="cta__ask">Cuéntanos qué necesitas.</p>
-          <p class="cta__promise">Nosotros lo llevamos<br>de principio a fin<span class="accent-dot">.</span></p>
+          <p class="cta__promise">
+            Cuéntanos qué necesitas o envíanos algunas fotos.
+            Nosotros te ayudamos a definir el siguiente paso.
+          </p>
           <a class="btn btn--primary btn--lg" href="https://wa.me/525533101723?text=Hola%2C%20contacto%20a%20RESOLVIA%20porque%20necesito%20ayuda%20con%20un%20proyecto." target="_blank" rel="noopener" data-whatsapp>
-            Hablar con RESOLVIA
-            <svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-arrow"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-chat"></use></svg>
+            Hablar por WhatsApp
           </a>
         </div>
       </div>
@@ -609,14 +671,22 @@
       <div class="container contact__grid">
         <div class="contact__info">
           <p class="eyebrow">Contacto</p>
-          <h2 class="section-title" id="contact-title">¿Qué necesitas resolver?</h2>
+          <h2 class="section-title" id="contact-title">Solicita una propuesta.</h2>
+          <p class="contact__intro">
+            Si prefieres describir tu necesidad con más detalle, usa el formulario.
+            Para algo inmediato o para enviar fotos, WhatsApp es lo más rápido.
+          </p>
 
           <address class="contact__data">
             <p class="contact__brand">RESOLVIA</p>
             <p class="contact__row">
               <svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-pin"></use></svg>
-              Ciudad de México, México
+              <span>CDMX y Zona Metropolitana<small>Proyectos especiales en otras ubicaciones</small></span>
             </p>
+            <a class="contact__row" href="https://wa.me/525533101723?text=Hola%2C%20contacto%20a%20RESOLVIA%20porque%20necesito%20ayuda%20con%20un%20proyecto." target="_blank" rel="noopener" data-whatsapp>
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-chat"></use></svg>
+              WhatsApp +52 55 3310 1723
+            </a>
             <a class="contact__row" href="tel:+525533101723">
               <svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-phone"></use></svg>
               +52 55 3310 1723
@@ -626,20 +696,6 @@
               contacto@resolvia.com.mx
             </a>
           </address>
-
-          <div class="contact__fallback">
-            <p>También puedes escribirnos directamente por WhatsApp o correo.</p>
-            <div class="contact__fallback-actions">
-              <a class="btn btn--dark btn--sm" href="https://wa.me/525533101723?text=Hola%2C%20contacto%20a%20RESOLVIA%20porque%20necesito%20ayuda%20con%20un%20proyecto." target="_blank" rel="noopener" data-whatsapp>
-                <svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-chat"></use></svg>
-                WhatsApp
-              </a>
-              <a class="btn btn--ghost btn--sm" href="mailto:contacto@resolvia.com.mx">
-                <svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-mail"></use></svg>
-                Correo
-              </a>
-            </div>
-          </div>
         </div>
 
         <!--
@@ -673,9 +729,23 @@
           </div>
           <p class="field__hint" id="f-contact-hint">Déjanos al menos un teléfono o un correo para responderte.</p>
 
-          <div class="field">
-            <label class="field__label" for="f-ubicacion">Ubicación del proyecto</label>
-            <input class="field__input" id="f-ubicacion" name="ubicacion" type="text" placeholder="Alcaldía o municipio">
+          <div class="form__row form__row--2">
+            <div class="field">
+              <label class="field__label" for="f-tipo">Tipo de necesidad</label>
+              <select class="field__input field__input--select" id="f-tipo" name="tipo">
+                <option value="">Selecciona una opción</option>
+                <option>Reparación</option>
+                <option>Mantenimiento</option>
+                <option>Remodelación o adecuación</option>
+                <option>Solución técnica</option>
+                <option>Proyecto con varias especialidades</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field__label" for="f-ubicacion">Ubicación</label>
+              <input class="field__input" id="f-ubicacion" name="ubicacion" type="text" placeholder="Alcaldía o municipio">
+            </div>
           </div>
 
           <div class="field">
@@ -696,7 +766,7 @@
 
           <div class="form__footer">
             <button class="btn btn--dark" type="submit" data-submit>
-              Enviar mensaje
+              Enviar solicitud
               <svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#i-arrow"></use></svg>
             </button>
             <p class="form__status" role="status" aria-live="polite" data-form-status></p>
@@ -716,14 +786,13 @@
           <source srcset="assets/logos/resolvia-light.webp" type="image/webp">
           <img class="site-footer__logo" src="assets/logos/resolvia-light.png" alt="RESOLVIA" width="520" height="159" loading="lazy" decoding="async">
         </picture>
-        <p class="site-footer__activity">Proyectos · Mantenimiento · Remodelación · Soluciones Técnicas</p>
-        <p class="site-footer__tagline">De principio a fin.</p>
+        <p class="site-footer__activity">Remodelación · Mantenimiento · Soluciones técnicas · Proyectos</p>
       </div>
 
       <div class="site-footer__col">
         <h2 class="site-footer__heading">Contacto</h2>
         <address class="site-footer__address">
-          <p>Ciudad de México, México</p>
+          <p>CDMX y Zona Metropolitana</p>
           <p><a href="tel:+525533101723">+52 55 3310 1723</a></p>
           <p><a href="mailto:contacto@resolvia.com.mx">contacto@resolvia.com.mx</a></p>
         </address>
@@ -734,9 +803,8 @@
         <ul class="site-footer__links" role="list">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#soluciones">Soluciones</a></li>
-          <li><a href="#proceso">Cómo trabajamos</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#metodo">Método</a></li>
+          <li><a href="#seguimiento">Seguimiento</a></li>
           <li><a href="#contacto">Contacto</a></li>
           <li><a href="privacidad.html">Aviso de privacidad</a></li>
         </ul>

@@ -7,19 +7,18 @@
    1. Botones
    2. HEADER
    3. HERO
-   4. TRANSICIÓN DE MARCA
-   5. VALUE PROPOSITION
+   4. VALUE PROPOSITION
    6. SERVICES
-   7. PROCESS
-   8. TRUST
-   9. PROJECTS
-   10. ABOUT
+   7. PROCESS (Método)
+   8. TRUST (Claridad) y 8b. CONTROL (documentos)
+   9. PROJECTS (desactivada hasta tener casos reales)
    11. CTA
    12. CONTACT
    13. FOOTER
    14. WhatsApp flotante
    15. Animaciones de entrada
    16. Páginas secundarias (404, privacidad)
+   17. Componentes para crecer (testimonios, indicadores, clientes)
    ========================================================================== */
 
 /* ==========================================================================
@@ -153,6 +152,18 @@ body.is-locked {
   color: var(--color-text-muted);
 }
 
+.section-title--wide {
+  max-width: 22ch;
+}
+
+.section-head__lead {
+  max-width: 40rem;
+  margin-top: var(--space-3);
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
 .lead {
   font-size: var(--fs-lead);
   line-height: 1.5;
@@ -182,6 +193,52 @@ body.is-locked {
   transform: scaleX(1);
 }
 
+/* Fotografías de marca: mismo tratamiento en todo el sitio.
+   Sin filtros ni overlays; relación de aspecto fija para evitar saltos (CLS). */
+.photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1376 / 768;
+  object-fit: contain;
+  background: var(--resolvia-beige);
+  border: 1px solid var(--resolvia-line);
+  border-radius: var(--radius);
+}
+
+.photo--dark {
+  background: var(--resolvia-charcoal-deep);
+  border-color: var(--resolvia-line-dark);
+}
+
+/* Imagen + contenido. En móvil: contenido primero, imagen después. */
+.media-split {
+  display: grid;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.media-split__media {
+  margin: 0;
+  order: 2;
+}
+
+.media-split__content {
+  min-width: 0;
+}
+
+.media-split__text {
+  max-width: 34rem;
+  margin-top: var(--space-3);
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.section-title--md {
+  font-size: clamp(1.9rem, 3.4vw, 3rem);
+}
+
 /* Placeholder de fotografía: claro, honesto, con retícula de plano */
 .media-placeholder {
   position: relative;
@@ -206,23 +263,7 @@ body.is-locked {
   border: 1px solid var(--resolvia-line);
 }
 
-.media-caption {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-top: 0.75rem;
-  font-family: var(--font-mono);
-  font-size: var(--fs-label);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-  border-top: 1px solid var(--resolvia-line);
-  margin-top: 0.75rem;
-}
 
-.media-caption__status {
-  color: var(--color-accent-text);
-}
 
 /* ==========================================================================
    1. Botones
@@ -561,32 +602,15 @@ body.is-locked {
   margin-bottom: var(--space-4);
 }
 
-.hero__note {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  max-width: 36rem;
-  padding-top: var(--space-3);
-  border-top: 1px solid var(--resolvia-line);
-  font-size: var(--fs-small);
-  color: var(--color-text-muted);
-}
-
-.hero__note-mark {
-  flex-shrink: 0;
-  width: 8px;
-  height: 8px;
-  margin-top: 0.5em;
-  background: var(--resolvia-orange);
+.hero__prompt {
+  margin-bottom: var(--space-2);
+  font-weight: 700;
+  color: var(--resolvia-charcoal);
 }
 
 .hero__media {
   position: relative;
-}
-
-.hero__media .media-placeholder {
-  aspect-ratio: 4 / 3;
-  border: 1px solid var(--resolvia-line);
+  margin: 0;
 }
 
 /* Marcas de corte en las esquinas (detalle de plano) */
@@ -609,77 +633,9 @@ body.is-locked {
 }
 
 .hero__media::after {
-  bottom: calc(2.25rem - 6px);
+  bottom: -6px;
   right: -6px;
   border-width: 0 1px 1px 0;
-}
-
-/* Dibujo de plano (placeholder del hero) */
-.plan {
-  width: 82%;
-  height: auto;
-  max-height: 92%;
-  overflow: visible;
-}
-
-.plan__wall {
-  fill: none;
-  stroke: var(--resolvia-charcoal);
-  stroke-width: 6;
-}
-
-.plan__part {
-  fill: none;
-  stroke: var(--resolvia-charcoal);
-  stroke-width: 3;
-}
-
-.plan__door {
-  fill: none;
-  stroke: var(--resolvia-gray);
-  stroke-width: 1;
-  stroke-dasharray: 3 3;
-}
-
-.plan__zone {
-  fill: rgba(217, 107, 39, 0.1);
-  stroke: var(--resolvia-orange);
-  stroke-width: 1.5;
-}
-
-.plan__check {
-  fill: none;
-  stroke: var(--resolvia-orange);
-  stroke-width: 5;
-  stroke-linecap: square;
-  stroke-dasharray: 70;
-  stroke-dashoffset: 70;
-  animation: draw 1s var(--ease) 0.9s forwards;
-}
-
-.plan__dim {
-  fill: none;
-  stroke: var(--resolvia-gray);
-  stroke-width: 1;
-}
-
-.plan__label,
-.plan__tag {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  fill: var(--resolvia-gray);
-}
-
-.plan__tag {
-  font-size: 12px;
-}
-
-.plan__tag--accent {
-  fill: var(--resolvia-orange-deep);
-}
-
-@keyframes draw {
-  to { stroke-dashoffset: 0; }
 }
 
 .hero__scroll {
@@ -687,7 +643,7 @@ body.is-locked {
 }
 
 /* ==========================================================================
-   4. TRANSICIÓN DE MARCA
+   4. VALUE PROPOSITION — Un problema. Un responsable. Una solución.
    ========================================================================== */
 
 .statement__title {
@@ -698,151 +654,124 @@ body.is-locked {
   line-height: 1.02;
   letter-spacing: var(--tracking-tight);
   text-transform: uppercase;
-  margin-bottom: var(--space-5);
 }
 
 .statement__accent {
   color: var(--resolvia-orange);
 }
 
-.statement__body {
-  display: grid;
-  gap: var(--space-3);
-  padding-top: var(--space-4);
-  max-width: 60rem;
+.statement__title {
+  margin-bottom: var(--space-4);
 }
 
-.statement__body p:not(.lead) {
-  color: var(--color-text-muted);
-  font-size: 1.125rem;
+.statement__lead {
+  max-width: 34rem;
+  margin-bottom: var(--space-4);
 }
 
-.statement__body strong {
-  color: var(--color-text);
-  font-weight: 700;
-}
-
-/* ==========================================================================
-   5. VALUE PROPOSITION
-   ========================================================================== */
-
-.value__grid {
-  display: grid;
-  border-top: 1px solid var(--resolvia-charcoal);
-}
-
-.value__item {
-  display: grid;
-  align-content: start;
-  gap: 0.5rem;
-  padding: var(--space-4) 0;
-  border-bottom: 1px solid var(--resolvia-line);
-}
-
-.value__num {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  color: var(--color-accent-text);
-  margin-bottom: var(--space-2);
-}
-
-.value__title {
-  font-size: var(--fs-h3);
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-}
-
-.value__item p {
-  color: var(--color-text-muted);
-  max-width: 28ch;
-}
-
-.value__close {
-  display: flex;
-  flex-direction: column;
-  margin-top: clamp(3rem, 8vw, 6rem);
-  font-size: var(--fs-h2);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: var(--tracking-tight);
-  text-transform: uppercase;
-}
-
-.value__close span:first-child {
-  color: var(--resolvia-gray-light);
-}
-
-/* ==========================================================================
-   6. SERVICES
-   ========================================================================== */
-
-.services__list {
-  border-top: 1px solid var(--resolvia-charcoal);
-}
-
-.service {
+.statement__quote {
   position: relative;
-  display: grid;
-  grid-template-columns: 2.75rem 1fr;
-  column-gap: 1rem;
-  row-gap: 0.5rem;
-  padding: var(--space-4) 0;
-  border-bottom: 1px solid var(--resolvia-line);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--resolvia-charcoal);
 }
 
-/* Línea naranja que recorre la fila al pasar el cursor */
-.service::after {
+.statement__quote::before {
   content: "";
   position: absolute;
+  top: -1px;
   left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 1px;
+  width: 4rem;
+  height: 3px;
+  background: var(--resolvia-orange);
+}
+
+.statement__quote p {
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.statement__quote p + p {
+  color: var(--resolvia-brown);
+}
+
+/* ==========================================================================
+   6. SERVICES — Cuatro pilares
+   ========================================================================== */
+
+.pillars {
+  display: grid;
+  gap: 1px;
+  background: var(--resolvia-line);
+  border: 1px solid var(--resolvia-line);
+}
+
+.pillar {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 0.6rem;
+  padding: var(--space-4) var(--space-3);
+  background: var(--color-bg);
+  transition: background-color var(--dur) var(--ease);
+}
+
+/* Línea naranja superior que se dibuja al pasar el cursor */
+.pillar::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  top: -1px;
+  height: 2px;
   background: var(--resolvia-orange);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--dur) var(--ease);
 }
 
-.service:hover::after {
+.pillar:hover {
+  background: var(--resolvia-white);
+}
+
+.pillar:hover::before {
   transform: scaleX(1);
 }
 
-.service__num {
-  grid-row: span 2;
+.pillar__num {
   font-family: var(--font-mono);
   font-size: 0.875rem;
   color: var(--color-accent-text);
-  padding-top: 0.45rem;
+  margin-bottom: var(--space-2);
 }
 
-.service__title {
-  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+.pillar__title {
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
   font-weight: 800;
   line-height: 1.1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
 }
 
-.service__text {
+.pillar__text {
   color: var(--color-text-muted);
-  max-width: 46ch;
+  max-width: 34ch;
 }
 
-.services__quote {
-  margin-top: clamp(3rem, 7vw, 5rem);
-  padding-left: var(--space-3);
-  border-left: 2px solid var(--resolvia-orange);
-  max-width: 50rem;
+.pillars__note {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: var(--space-4);
+  font-weight: 700;
 }
 
-.services__quote p {
-  font-size: clamp(1.3rem, 2.6vw, 2rem);
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: -0.02em;
+.pillars__mark {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--resolvia-orange);
 }
 
 /* ==========================================================================
@@ -889,7 +818,7 @@ body.is-locked {
   top: 0.35rem;
   width: 15px;
   height: 15px;
-  background: var(--resolvia-cream);
+  background: var(--color-bg);
   border: 1px solid var(--resolvia-charcoal);
   transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
@@ -927,118 +856,381 @@ body.is-locked {
   max-width: 30ch;
 }
 
-.process__close {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  margin-top: clamp(3.5rem, 8vw, 6rem);
-  padding-top: var(--space-4);
-  border-top: 1px solid var(--resolvia-charcoal);
-  font-size: clamp(1.25rem, 2.6vw, 2rem);
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
+
+
+/* ==========================================================================
+   8. TRUST — Claridad antes, durante y después
+   ========================================================================== */
+
+.clarity .section-title {
+  color: var(--resolvia-white-warm);
 }
 
-.process__close span:last-child {
-  color: var(--color-accent-text);
+.phases {
+  display: grid;
+  border-top: 1px solid var(--resolvia-line-dark);
+}
+
+.phase {
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--resolvia-line-dark);
+}
+
+.phase__head {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: var(--space-3);
+}
+
+.phase__num {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--resolvia-orange-soft);
+}
+
+.phase__title {
+  font-size: clamp(1.75rem, 3.4vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--resolvia-white-warm);
+}
+
+.phase__list {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.phase__list li {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-height: 2.25rem;
+  color: var(--resolvia-cream);
+  font-weight: 500;
+}
+
+/* Marca de verificación de RESOLVIA: esquina en naranja, no un check genérico */
+.phase__list li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 10px;
+  height: 6px;
+  margin-top: -3px;
+  border-left: 2px solid var(--resolvia-orange);
+  border-bottom: 2px solid var(--resolvia-orange);
+  transform: rotate(-45deg);
+}
+
+.clarity__close {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 46rem;
+  margin-top: clamp(3rem, 7vw, 5rem);
+  padding-left: var(--space-3);
+  border-left: 2px solid var(--resolvia-orange);
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  line-height: 1.4;
+  color: var(--resolvia-gray-light);
+}
+
+.clarity__close strong {
+  color: var(--resolvia-white-warm);
+  font-weight: 700;
 }
 
 /* ==========================================================================
-   8. TRUST
+   8b. CONTROL — Documentos de seguimiento (maquetas en CSS)
    ========================================================================== */
 
-.trust__grid {
+.control .media-split {
+  margin-bottom: clamp(3.5rem, 8vw, 6rem);
+}
+
+.clarity__media {
+  margin: 0 0 var(--space-5);
+}
+
+.docs {
   display: grid;
-  gap: var(--space-5);
-}
-
-.trust .section-title {
-  color: var(--resolvia-white-warm);
-  margin-bottom: var(--space-4);
-}
-
-.trust__text {
-  color: var(--resolvia-gray-light);
-  max-width: 34rem;
-  font-size: 1.125rem;
-}
-
-.trust__text + .trust__text {
-  margin-top: var(--space-2);
-}
-
-.trust__list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  border-top: 1px solid var(--resolvia-line-dark);
-  border-left: 1px solid var(--resolvia-line-dark);
-}
-
-.trust-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   gap: var(--space-4);
-  min-height: 9.5rem;
-  padding: var(--space-3) 1.1rem;
-  border-right: 1px solid var(--resolvia-line-dark);
-  border-bottom: 1px solid var(--resolvia-line-dark);
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.3;
-  color: var(--resolvia-white-warm);
-  transition: background-color var(--dur) var(--ease);
 }
 
-.trust-item:hover {
-  background: rgba(255, 255, 255, 0.03);
+.doc-card {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
 }
 
-.trust-item__icon {
-  width: 44px;
-  height: 44px;
-  color: var(--resolvia-sand);
+.doc {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 0.9rem;
+  min-height: 15rem;
+  padding: 1.1rem 1.1rem 1.25rem;
+  background: var(--resolvia-white);
+  border: 1px solid var(--resolvia-line);
+  box-shadow: 0 1px 0 var(--resolvia-line), 0 14px 30px -22px rgba(44, 43, 43, 0.35);
+  overflow: hidden;
+  transition: transform var(--dur) var(--ease);
+}
+
+.doc-card:hover .doc {
+  transform: translateY(-3px);
+}
+
+/* Barras grises: texto simulado */
+.doc i {
+  display: block;
+  height: 6px;
+  width: 70%;
+  background: #E9E4DC;
+}
+
+.doc__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--resolvia-charcoal);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.1em;
+}
+
+.doc__brand {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+
+.doc__ref {
+  color: var(--resolvia-orange-deep);
+}
+
+.doc__heading,
+.doc__tag,
+.doc__total span,
+.doc__progress span:first-child,
+.doc__signs span {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--resolvia-gray);
+}
+
+.doc__lines {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.doc__lines li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.doc__lines li:nth-child(2) i { width: 58%; }
+.doc__lines li:nth-child(3) i { width: 66%; }
+
+.doc__bullet {
+  width: 5px;
+  height: 5px;
+  background: var(--resolvia-charcoal);
+}
+
+.doc__split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.doc__split div {
+  display: grid;
+  gap: 0.4rem;
+  padding: 0.55rem;
+  background: var(--resolvia-cream);
+}
+
+.doc__split i:last-child { width: 55%; }
+
+.doc__tag--in { color: #2F6B3A; }
+.doc__tag--out { color: var(--resolvia-orange-deep); }
+
+.doc__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--resolvia-line);
+}
+
+.doc__total i {
+  width: 34%;
+  height: 8px;
+  background: var(--resolvia-charcoal);
+}
+
+/* Cronograma */
+.gantt {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.gantt__head,
+.gantt__row {
+  display: grid;
+  grid-template-columns: 28% repeat(4, 1fr);
+  align-items: center;
+}
+
+.gantt__head span {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  color: var(--resolvia-gray);
+  border-left: 1px dashed var(--resolvia-line);
+  padding-left: 0.3rem;
+}
+
+.gantt__head span:first-child {
+  border: 0;
+}
+
+.gantt__row i {
+  width: 80%;
+}
+
+.gantt__bar {
+  display: block;
+  height: 12px;
+  background: var(--resolvia-charcoal);
+}
+
+.gantt__bar--1 { grid-column: 2 / 3; }
+.gantt__bar--2 { grid-column: 3 / 5; }
+.gantt__bar--3 { grid-column: 4 / 6; }
+.gantt__bar--4 { grid-column: 5 / 6; }
+
+.gantt__bar.is-accent {
+  background: var(--resolvia-orange);
+}
+
+
+/* Reporte de avance */
+.doc__progress {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.doc__meter {
+  height: 8px;
+  background: #E9E4DC;
+}
+
+.doc__meter b {
+  display: block;
+  width: 62%;
+  height: 100%;
+  background: var(--resolvia-orange);
+  transform-origin: left;
+  transition: transform 1.2s var(--ease) 0.3s;
+}
+
+.js .doc-card:not(.is-visible) .doc__meter b {
+  transform: scaleX(0);
+}
+
+.doc__photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;
+}
+
+.doc__photos span {
+  aspect-ratio: 1;
+  background-color: var(--resolvia-beige);
+  background-image:
+    linear-gradient(135deg, transparent 45%, rgba(44, 43, 43, 0.12) 45%, rgba(44, 43, 43, 0.12) 55%, transparent 55%);
+}
+
+.doc__checks {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.doc__checks li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.doc__checks li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 11px;
+  height: 11px;
+  border: 1.5px solid var(--resolvia-charcoal);
+}
+
+.doc__checks li.is-done::before {
+  background: var(--resolvia-orange);
+  border-color: var(--resolvia-orange);
+}
+
+.doc__checks li:nth-child(2) i { width: 56%; }
+.doc__checks li:nth-child(3) i { width: 64%; }
+.doc__checks li:nth-child(4) i { width: 48%; }
+
+.doc__signs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.doc__signs span {
+  padding-top: 0.45rem;
+  border-top: 1px solid var(--resolvia-charcoal);
+}
+
+.doc-card__caption {
+  display: grid;
+  gap: 0.25rem;
+  color: var(--color-text-muted);
+  font-size: var(--fs-small);
+}
+
+.doc-card__caption strong {
+  color: var(--color-text);
+  font-size: 1.0625rem;
+  font-weight: 800;
+}
+
+.doc-card__num {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  color: var(--color-accent-text);
+}
+
+.docs__note {
+  margin-top: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
 }
 
 /* ==========================================================================
    9. PROJECTS
    ========================================================================== */
-
-.case-model {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: var(--space-5);
-  font-family: var(--font-mono);
-  font-size: var(--fs-label);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.case-model li {
-  position: relative;
-  padding: 0.5rem 0.6rem;
-  border: 1px solid var(--resolvia-charcoal);
-}
-
-.case-model li:last-child {
-  background: var(--resolvia-charcoal);
-  color: var(--resolvia-white-warm);
-}
-
-/* Conector naranja: necesidad → solución → resultado */
-.case-model li + li::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: calc(-1rem - 1px);
-  width: 1rem;
-  height: 1px;
-  background: var(--resolvia-orange);
-}
 
 .projects__grid {
   display: grid;
@@ -1161,59 +1353,7 @@ body.is-locked {
   font-size: var(--fs-small);
 }
 
-.case--pending {
-  border-style: dashed;
-  border-color: #CFC6B9;
-  background: transparent;
-}
 
-/* ==========================================================================
-   10. ABOUT
-   ========================================================================== */
-
-.about__grid {
-  display: grid;
-  gap: var(--space-4);
-}
-
-.about__body {
-  display: grid;
-  gap: var(--space-3);
-  max-width: 40rem;
-}
-
-.about__body > p:not(.lead) {
-  color: var(--color-text-muted);
-  font-size: 1.125rem;
-}
-
-.about__quote {
-  margin-top: var(--space-4);
-  padding: var(--space-4) 0 0;
-  border-top: 1px solid var(--resolvia-charcoal);
-  position: relative;
-}
-
-.about__quote::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  left: 0;
-  width: 4rem;
-  height: 3px;
-  background: var(--resolvia-orange);
-}
-
-.about__quote p {
-  font-size: clamp(1.4rem, 2.8vw, 2.1rem);
-  font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-}
-
-.about__quote p + p {
-  color: var(--resolvia-brown);
-}
 
 /* ==========================================================================
    11. CTA
@@ -1305,22 +1445,16 @@ body.is-locked {
   transform: none;
 }
 
-.cta__ask {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
-  color: var(--resolvia-orange-soft);
-}
+
 
 .cta__promise {
-  font-size: clamp(1.9rem, 3.6vw, 3.25rem);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: var(--tracking-tight);
-  text-transform: uppercase;
+  max-width: 30rem;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
   color: var(--resolvia-white-warm);
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-2);
 }
 
 /* ==========================================================================
@@ -1343,6 +1477,29 @@ body.is-locked {
   margin-bottom: var(--space-4);
 }
 
+.contact__intro {
+  max-width: 34rem;
+  margin-bottom: var(--space-4);
+  color: var(--color-text-muted);
+}
+
+.contact__row small {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.field__input--select {
+  appearance: none;
+  padding-right: 2.5rem;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--resolvia-charcoal) 50%),
+    linear-gradient(135deg, var(--resolvia-charcoal) 50%, transparent 50%);
+  background-position: calc(100% - 1.15rem) 55%, calc(100% - 0.8rem) 55%;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
 .contact__brand {
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -1363,23 +1520,6 @@ a.contact__row:hover {
 
 .contact__row .icon {
   color: var(--resolvia-charcoal);
-}
-
-.contact__fallback {
-  padding: var(--space-3);
-  background: var(--resolvia-cream);
-  border-left: 2px solid var(--resolvia-orange);
-}
-
-.contact__fallback p {
-  margin-bottom: var(--space-2);
-  font-weight: 600;
-}
-
-.contact__fallback-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
 }
 
 /* ---- Formulario ---- */
@@ -1638,10 +1778,6 @@ a.contact__row:hover {
     opacity: 1;
     transform: none;
   }
-
-  .plan__check {
-    stroke-dashoffset: 0;
-  }
 }
 
 /* ==========================================================================
@@ -1763,4 +1899,56 @@ a.contact__row:hover {
 
 .icon--back {
   transform: scaleX(-1);
+}
+
+/* ==========================================================================
+   17. Componentes para crecer (no activos todavía)
+   Usar solo con información real y autorizada. Plantillas en index.html.
+   ========================================================================== */
+
+.testimonial {
+  margin: 0;
+  padding: var(--space-4) var(--space-3);
+  background: var(--resolvia-white);
+  border-left: 2px solid var(--resolvia-orange);
+}
+
+.testimonial blockquote p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: var(--space-2);
+}
+
+.testimonial figcaption {
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+}
+
+.metric {
+  display: grid;
+  gap: 0.25rem;
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--resolvia-charcoal);
+}
+
+.metric__value {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.metric__label {
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+}
+
+.logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  align-items: center;
+  font-weight: 700;
+  color: var(--resolvia-gray);
 }

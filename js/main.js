@@ -327,7 +327,8 @@
       `Empresa / organización: ${data.get("empresa") || "-"}`,
       `Teléfono: ${data.get("telefono") || "-"}`,
       `Correo: ${data.get("correo") || "-"}`,
-      `Ubicación del proyecto: ${data.get("ubicacion") || "-"}`,
+      `Tipo de necesidad: ${data.get("tipo") || "-"}`,
+      `Ubicación: ${data.get("ubicacion") || "-"}`,
       "",
       "¿Qué necesito resolver?",
       data.get("mensaje")
