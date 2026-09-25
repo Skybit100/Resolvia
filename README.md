@@ -130,7 +130,7 @@ El mensaje prellenado de WhatsApp se define en `js/main.js` → `CONFIG.whatsapp
 
 ### Conectar el formulario (Formspree u otro servicio)
 
-GitHub Pages no puede procesar formularios por su cuenta. Mientras no conectes un servicio, el botón “Enviar mensaje” abre la aplicación de correo del visitante con el mensaje ya redactado. El sitio no finge un envío.
+El formulario está conectado a Formspree (`https://formspree.io/f/xwlpnaqj`, en `data-endpoint` y `action` del `<form>`). Los mensajes llegan al correo de la cuenta de Formspree. Si se deja vacío el endpoint, el botón abre la aplicación de correo del visitante con el mensaje ya redactado.
 
 Para recibir los mensajes directamente:
 1. Crea un formulario en [formspree.io](https://formspree.io). También funciona cualquier servicio que acepte `POST` con `FormData` y responda en JSON.
@@ -210,6 +210,6 @@ En el `<head>` de `index.html` hay un bloque comentado que dice `GOOGLE ANALYTIC
 - [ ] Fotografía real para el hero (y opcionalmente para Nosotros).
 - [ ] Primeros casos reales en Proyectos, con autorización del cliente.
 - [ ] Datos legales del Aviso de privacidad (todo lo marcado `[DATOS LEGALES PENDIENTES]`).
-- [ ] Endpoint del formulario (Formspree o equivalente).
+- [x] Endpoint del formulario (Formspree).
 - [ ] ID de Google Analytics 4 (opcional).
 - [ ] DNS de `resolvia.com.mx` y HTTPS.
