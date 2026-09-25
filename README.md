@@ -38,6 +38,7 @@ Este es un sitio estático: HTML, CSS y JavaScript sin frameworks. Funciona dire
     │   └── resolvia-logo-1200.png     Logo en alta resolución (datos estructurados)
     ├── images/
     │   ├── resolvia-og.jpg            Imagen para compartir en redes (1200×630)
+    │   ├── Antes y despues Resolvia.png         Caso real · Proyectos
     │   ├── resolvia-01-hero-resolvemos.jpg        Imagen 01 · Hero
     │   ├── resolvia-02-metodo-control.jpg         Imagen 02 · Seguimiento
     │   ├── resolvia-03-antes-durante-despues.jpg  Imagen 03 · Claridad
@@ -57,7 +58,7 @@ Cada sección en `index.html` y `styles.css` está marcada con un comentario en 
 5. `TRUST`: Claridad antes, durante y después (imagen 03)
 6. `QUALITY`: Bien hecho también está en los detalles (imagen 04)
 7. `VALUE PROPOSITION`: Un problema. Un responsable. Una solución. (imagen 05)
-8. `PROJECTS`: trabajos reales (desactivada, `#trabajos`)
+8. `PROJECTS`: Problemas resueltos, casos reales (`#proyectos`)
 9. `CTA`: ¿Tienes algo que resolver?
 10. `CONTACT` y `FOOTER`
 
@@ -94,18 +95,18 @@ Reglas: escribe siempre un `alt` que describa la imagen, indica `width` y `heigh
 
 ---
 
-## 4. Cómo agregar un trabajo (y activar la sección)
+## 4. Cómo agregar un caso real
 
-La sección `PROJECTS` (`#trabajos`) está **desactivada** con el atributo `hidden` hasta que haya casos reales documentados. Así el sitio no muestra mensajes de “próximamente”.
+La sección `PROJECTS` (`#proyectos`, "Problemas resueltos.") muestra casos reales. Cada caso es un bloque `<article class="case">` con la misma estructura:
 
-1. En `index.html`, sección `PROJECTS`, copia la **plantilla comentada** `<article class="case">…</article>`.
-2. Pégala dentro de `<div class="projects__grid">`, fuera del comentario.
-3. Completa categoría, nombre, ubicación, duración y los tres pasos **Problema → Solución → Resultado**. Lo que importa es cómo se resolvió, no el tamaño o el monto de la obra.
-4. Sube las fotos **antes** y **después** a `assets/images/projects/` y ajusta las rutas.
-5. Quita `hidden` de `<section class="projects section" id="trabajos" …>`.
-6. Agrega “Trabajos” al menú (`site-nav`, `mobile-menu` y footer) con `href="#trabajos"`.
+**Imagen → Nombre del proyecto → breve descripción → Necesidad · Solución · Resultado**
 
-Antes de publicar un caso, confirma que el cliente autoriza mostrar su nombre y sus fotografías. No publiques métricas ni testimonios que no puedas respaldar.
+1. Sube la imagen a `assets/images/`. Si el nombre tiene espacios, en el `src` escríbelos como `%20` (por ejemplo `Antes%20y%20despues%20Resolvia.png`).
+2. En `index.html`, copia el bloque completo del `CASO 01` (desde `<article class="case"` hasta `</article>`) y pégalo debajo, dentro de `<div class="projects__list">`.
+3. Cambia la imagen (`src`, `alt`, `width` y `height` reales), el título, la descripción y los tres textos. Cambia también el `id` del título (`case-02-title`) y el `aria-labelledby` del artículo.
+4. La imagen se muestra completa, sin recorte. Usa `loading="lazy"`.
+
+Reglas: solo casos reales, con autorización del cliente. Lo importante es cómo se resolvió, no el tamaño de la obra. Sin carrusel; con 3 o más casos se puede evaluar una galería.
 
 ### Componentes para crecer
 

@@ -123,6 +123,7 @@
           <li><a class="site-nav__link" href="#soluciones">Soluciones</a></li>
           <li><a class="site-nav__link" href="#metodo">Método</a></li>
           <li><a class="site-nav__link" href="#seguimiento">Seguimiento</a></li>
+          <li><a class="site-nav__link" href="#proyectos">Proyectos</a></li>
           <li><a class="site-nav__link" href="#contacto">Contacto</a></li>
         </ul>
       </nav>
@@ -147,7 +148,8 @@
           <li><a href="#soluciones"><span class="mobile-menu__num">02</span>Soluciones</a></li>
           <li><a href="#metodo"><span class="mobile-menu__num">03</span>Método</a></li>
           <li><a href="#seguimiento"><span class="mobile-menu__num">04</span>Seguimiento</a></li>
-          <li><a href="#contacto"><span class="mobile-menu__num">05</span>Contacto</a></li>
+          <li><a href="#proyectos"><span class="mobile-menu__num">05</span>Proyectos</a></li>
+          <li><a href="#contacto"><span class="mobile-menu__num">06</span>Contacto</a></li>
         </ol>
       </nav>
       <div class="mobile-menu__footer">
@@ -563,57 +565,55 @@
     </section>
 
     <!-- ===================================================================
-         PROJECTS — Trabajos reales (DESACTIVADA)
-         Se activa quitando el atributo `hidden` cuando existan casos reales
-         documentados y autorizados. Ver README → "Agregar un trabajo".
-         No inventar proyectos, clientes, testimonios ni métricas.
+         PROJECTS — Problemas resueltos (casos reales)
+         Cada caso es un <article class="case"> con: imagen, nombre,
+         Necesidad → Solución → Resultado. Para agregar uno, copia el bloque
+         completo. Solo casos reales y autorizados; sin carrusel.
+         Con 3 o más casos se puede evaluar una galería.
          =================================================================== -->
-    <section class="projects section" id="trabajos" aria-labelledby="projects-title" hidden>
+    <section class="projects section" id="proyectos" aria-labelledby="projects-title">
       <div class="container">
         <header class="section-head section-head--split">
           <div>
-            <p class="eyebrow">Trabajos</p>
-            <h2 class="section-title" id="projects-title">Problemas resueltos.</h2>
+            <p class="eyebrow" data-reveal>Proyectos</p>
+            <h2 class="section-title" id="projects-title" data-reveal>Problemas resueltos.</h2>
           </div>
-          <p class="section-head__aside">
-            Cada caso muestra qué había que resolver, cómo se resolvió y qué se entregó.
+          <p class="section-head__aside" data-reveal>
+            Cada caso se documenta con el mismo orden con el que trabajamos: qué se necesitaba, cómo se resolvió y qué se entregó.
           </p>
         </header>
 
-        <div class="projects__grid">
-          <!-- ============ PLANTILLA DE CASO (copiar y completar) ============
-          <article class="case">
-            <div class="case__media">
-              <figure class="case__photo">
-                <picture>
-                  <source srcset="assets/images/projects/nombre-antes.webp" type="image/webp">
-                  <img src="assets/images/projects/nombre-antes.jpg" alt="Estado inicial de ..." width="800" height="600" loading="lazy" decoding="async">
-                </picture>
-                <figcaption>Antes</figcaption>
-              </figure>
-              <figure class="case__photo">
-                <picture>
-                  <source srcset="assets/images/projects/nombre-despues.webp" type="image/webp">
-                  <img src="assets/images/projects/nombre-despues.jpg" alt="Resultado de ..." width="800" height="600" loading="lazy" decoding="async">
-                </picture>
-                <figcaption>Después</figcaption>
-              </figure>
-            </div>
+        <div class="projects__list">
+          <!-- CASO 01 -->
+          <article class="case" aria-labelledby="case-01-title">
+            <figure class="case__media" data-reveal>
+              <img src="assets/images/Antes%20y%20despues%20Resolvia.png"
+                   alt="Antes y después de proyecto de remodelación realizado por Resolvia"
+                   width="1536" height="1024" loading="lazy" decoding="async">
+            </figure>
+
             <div class="case__body">
-              <p class="case__category">Impermeabilización</p>
-              <h3 class="case__title">Nombre breve del trabajo</h3>
-              <dl class="case__meta">
-                <div><dt>Ubicación</dt><dd>Alcaldía o municipio</dd></div>
-                <div><dt>Duración</dt><dd>0 días</dd></div>
+              <div class="case__intro" data-reveal>
+                <h3 class="case__title" id="case-01-title">Renovación de espacio exterior</h3>
+                <p class="case__text">Recuperación y mejora de un espacio residencial mediante trabajos de mantenimiento, acabados y adecuación, conservando elementos existentes cuando se encontraban en buenas condiciones.</p>
+              </div>
+
+              <dl class="case__flow" data-reveal>
+                <div class="case__step">
+                  <dt>Necesidad</dt>
+                  <dd>Recuperar y mejorar el espacio.</dd>
+                </div>
+                <div class="case__step">
+                  <dt>Solución</dt>
+                  <dd>Mantenimiento, adecuaciones y renovación de acabados.</dd>
+                </div>
+                <div class="case__step">
+                  <dt>Resultado</dt>
+                  <dd>Un espacio renovado, funcional y listo para disfrutarse.</dd>
+                </div>
               </dl>
-              <ol class="case__flow" role="list">
-                <li><span class="case__flow-label">Problema</span><p>Qué había que resolver.</p></li>
-                <li><span class="case__flow-label">Solución</span><p>Qué hicimos y cómo lo coordinamos.</p></li>
-                <li><span class="case__flow-label">Resultado</span><p>Qué se entregó y cómo quedó documentado.</p></li>
-              </ol>
             </div>
           </article>
-          ================================================================= -->
         </div>
       </div>
     </section>
@@ -805,6 +805,7 @@
           <li><a href="#soluciones">Soluciones</a></li>
           <li><a href="#metodo">Método</a></li>
           <li><a href="#seguimiento">Seguimiento</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
           <li><a href="#contacto">Contacto</a></li>
           <li><a href="privacidad.html">Aviso de privacidad</a></li>
         </ul>

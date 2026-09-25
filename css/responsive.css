@@ -56,10 +56,6 @@
   .site-header__cta {
     display: inline-flex;
   }
-
-  .case__body {
-    padding: var(--space-5) var(--space-4);
-  }
 }
 
 /* ---------- ≥ 900px ---------- */
@@ -166,18 +162,20 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
-  /* PROJECTS */
-  .case {
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  /* PROJECTS: Necesidad → Solución → Resultado en horizontal */
+  .case__flow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-bottom: 1px solid var(--resolvia-line);
   }
 
-  .case__media {
-    grid-template-columns: 1fr;
+  .case__step {
+    padding: var(--space-3) var(--space-3) var(--space-3) 0;
+    border-bottom: 0;
   }
 
-  .case__photo {
-    aspect-ratio: auto;
-    min-height: 220px;
+  .case__step + .case__step {
+    padding-left: var(--space-3);
+    border-left: 1px solid var(--resolvia-line);
   }
 
   /* CTA */
