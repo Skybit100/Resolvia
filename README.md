@@ -12,7 +12,7 @@ Este es un sitio estático: HTML, CSS y JavaScript sin frameworks. Funciona dire
 /
 ├── index.html            Página principal (todas las secciones)
 ├── 404.html              Página de error (GitHub Pages la usa sola)
-├── privacidad.html       Aviso de privacidad (con datos legales pendientes)
+├── privacidad.html       Aviso de privacidad (versión provisional, en revisión legal)
 ├── CNAME                 Dominio personalizado: resolvia.com.mx
 ├── robots.txt
 ├── sitemap.xml
@@ -209,7 +209,7 @@ En el `<head>` de `index.html` hay un bloque comentado que dice `GOOGLE ANALYTIC
 
 - [ ] Fotografía real para el hero (y opcionalmente para Nosotros).
 - [ ] Primeros casos reales en Proyectos, con autorización del cliente.
-- [ ] Datos legales del Aviso de privacidad (todo lo marcado `[DATOS LEGALES PENDIENTES]`).
+- [ ] Revisión legal del Aviso de privacidad (versión provisional con datos públicos de RESOLVIA).
 - [x] Endpoint del formulario (Formspree).
 - [ ] ID de Google Analytics 4 (opcional).
 - [ ] DNS de `resolvia.com.mx` y HTTPS.
