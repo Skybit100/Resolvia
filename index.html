@@ -42,6 +42,7 @@
 
   <!-- ===== Recursos críticos ===== -->
   <link rel="preload" href="assets/fonts/manrope-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/images/resolvia-01-hero-resolvemos.jpg" as="image" fetchpriority="high">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -192,44 +193,11 @@
           </div>
         </div>
 
-        <!--
-          FOTOGRAFÍA PRINCIPAL
-          El plano es una ilustración provisional. Cuando exista una fotografía
-          real y profesional de un trabajo de RESOLVIA, sustituye el bloque
-          .media-placeholder por:
-          <picture>
-            <source srcset="assets/images/hero/hero.avif" type="image/avif">
-            <source srcset="assets/images/hero/hero.webp" type="image/webp">
-            <img src="assets/images/hero/hero.jpg" alt="Describe el trabajo real" width="1200" height="1500" fetchpriority="high">
-          </picture>
-          No usar fotos genéricas de edificios o megaproyectos.
-        -->
-        <figure class="hero__media" aria-hidden="true">
-          <div class="media-placeholder media-placeholder--plan">
-            <svg class="plan" viewBox="0 0 480 600" focusable="false">
-              <!-- Muros exteriores -->
-              <path class="plan__wall" d="M60 90H420V510H60Z"/>
-              <!-- Divisiones -->
-              <path class="plan__part" d="M60 300H230M290 300H420M230 90V240M230 360V510M330 300V510"/>
-              <!-- Puertas -->
-              <path class="plan__door" d="M230 240A60 60 0 0 1 290 300M290 300H230"/>
-              <path class="plan__door" d="M330 420A40 40 0 0 0 370 460"/>
-              <!-- Zona resuelta -->
-              <path class="plan__zone" d="M240 310H320V500H240Z"/>
-              <path class="plan__check" d="M262 402l14 14 26-30"/>
-              <!-- Cotas -->
-              <path class="plan__dim" d="M60 60H420M60 52V68M420 52V68"/>
-              <path class="plan__dim" d="M450 90V510M442 90H458M442 510H458"/>
-              <text class="plan__label" x="240" y="48" text-anchor="middle">9.00 m</text>
-              <text class="plan__label" x="466" y="304" transform="rotate(90 466 304)" text-anchor="middle">10.50 m</text>
-              <!-- Referencias -->
-              <text class="plan__tag" x="76" y="118">A-01</text>
-              <text class="plan__tag" x="246" y="118">A-02</text>
-              <text class="plan__tag" x="76" y="328">A-03</text>
-              <text class="plan__tag" x="346" y="328">A-05</text>
-              <text class="plan__tag plan__tag--accent" x="248" y="328">A-04</text>
-            </svg>
-          </div>
+        <!-- IMAGEN 01 · RESOLVEMOS (above the fold: sin lazy, carga prioritaria) -->
+        <figure class="hero__media">
+          <img class="photo" src="assets/images/resolvia-01-hero-resolvemos.jpg"
+               alt="Proyecto de remodelación y mantenimiento coordinado por Resolvia"
+               width="1376" height="768" fetchpriority="high" decoding="async">
         </figure>
       </div>
 
@@ -285,34 +253,10 @@
     </section>
 
     <!-- ===================================================================
-         VALUE PROPOSITION — Un problema. Un responsable. Una solución.
-         =================================================================== -->
-    <section class="statement section section--alt" id="enfoque" aria-labelledby="statement-title">
-      <div class="container statement__grid">
-        <h2 class="statement__title" id="statement-title" data-reveal>
-          <span>Un problema.</span>
-          <span>Un responsable.</span>
-          <span class="statement__accent">Una solución.</span>
-        </h2>
-
-        <div class="statement__body">
-          <p class="lead" data-reveal>
-            Un solo punto de contacto para planear, coordinar y ejecutar.
-            Tú hablas con RESOLVIA; RESOLVIA se encarga de los especialistas, los materiales y los tiempos.
-          </p>
-          <blockquote class="statement__quote" data-reveal>
-            <p>Resolver no es solamente ejecutar.</p>
-            <p>Es hacerse responsable de llegar al resultado.</p>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================================
          PROCESS — El método RESOLVIA (6 etapas)
          Horizontal en escritorio, secuencia vertical en móvil.
          =================================================================== -->
-    <section class="process section" id="metodo" aria-labelledby="process-title">
+    <section class="process section section--alt" id="metodo" aria-labelledby="process-title">
       <div class="container">
         <header class="section-head">
           <p class="eyebrow">El método RESOLVIA</p>
@@ -373,83 +317,28 @@
     </section>
 
     <!-- ===================================================================
-         TRUST — Claridad antes, durante y después
-         =================================================================== -->
-    <section class="clarity section section--dark" id="claridad" aria-labelledby="clarity-title">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow eyebrow--dark">Claridad</p>
-          <h2 class="section-title" id="clarity-title" data-reveal>
-            Sabes qué está pasando en cada momento.
-          </h2>
-        </header>
-
-        <div class="phases">
-          <article class="phase" data-reveal>
-            <header class="phase__head">
-              <span class="phase__num">01</span>
-              <h3 class="phase__title">Antes</h3>
-            </header>
-            <ul class="phase__list" role="list">
-              <li>Alcance claro</li>
-              <li>Presupuesto</li>
-              <li>Actividades</li>
-              <li>Tiempos</li>
-              <li>Consideraciones</li>
-            </ul>
-          </article>
-
-          <article class="phase" data-reveal>
-            <header class="phase__head">
-              <span class="phase__num">02</span>
-              <h3 class="phase__title">Durante</h3>
-            </header>
-            <ul class="phase__list" role="list">
-              <li>Seguimiento</li>
-              <li>Avances</li>
-              <li>Evidencia fotográfica</li>
-              <li>Comunicación</li>
-              <li>Control de cambios</li>
-            </ul>
-          </article>
-
-          <article class="phase" data-reveal>
-            <header class="phase__head">
-              <span class="phase__num">03</span>
-              <h3 class="phase__title">Después</h3>
-            </header>
-            <ul class="phase__list" role="list">
-              <li>Validación</li>
-              <li>Evidencias</li>
-              <li>Entrega</li>
-              <li>Cierre</li>
-            </ul>
-          </article>
-        </div>
-
-        <p class="clarity__close" data-reveal>
-          <span>No queremos que tengas que perseguir a diferentes proveedores para saber qué está pasando.</span>
-          <strong>RESOLVIA coordina el trabajo y responde por el proyecto.</strong>
-        </p>
-      </div>
-    </section>
-
-    <!-- ===================================================================
          CONTROL — Así mantenemos tu proyecto bajo control
          Maquetas en HTML/CSS de los documentos de trabajo.
          Información ficticia: no usar datos de clientes reales.
          =================================================================== -->
-    <section class="control section section--alt" id="seguimiento" aria-labelledby="control-title">
+    <section class="control section" id="seguimiento" aria-labelledby="control-title">
       <div class="container">
-        <header class="section-head section-head--split">
-          <div>
+        <div class="media-split media-split--image-first">
+          <!-- IMAGEN 02 · PLANEAMOS Y CONTROLAMOS -->
+          <figure class="media-split__media" data-reveal>
+            <img class="photo" src="assets/images/resolvia-02-metodo-control.jpg"
+                 alt="Planeación y seguimiento de proyectos con el método Resolvia"
+                 width="1376" height="768" loading="lazy" decoding="async">
+          </figure>
+          <div class="media-split__content">
             <p class="eyebrow">Seguimiento</p>
             <h2 class="section-title" id="control-title" data-reveal>Así mantenemos tu proyecto bajo control.</h2>
+            <p class="media-split__text" data-reveal>
+              Detrás de cada trabajo hay planeación: diagnóstico, alcance, cotización,
+              cronograma, evidencias, control de cambios y cierre. Todo queda documentado.
+            </p>
           </div>
-          <p class="section-head__aside" data-reveal>
-            Cada trabajo queda documentado: qué se hará, cuándo, cómo va y cómo se entregó.
-          </p>
-        </header>
+        </div>
 
         <div class="docs">
           <!-- 01 Propuesta y alcance -->
@@ -552,6 +441,124 @@
         </div>
 
         <p class="docs__note">Ejemplos ilustrativos. Cada proyecto recibe sus propios documentos.</p>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TRUST — Claridad antes, durante y después
+         =================================================================== -->
+    <section class="clarity section section--dark" id="claridad" aria-labelledby="clarity-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow eyebrow--dark">Claridad</p>
+          <h2 class="section-title" id="clarity-title" data-reveal>
+            Sabes qué está pasando en cada momento.
+          </h2>
+        </header>
+
+        <!-- IMAGEN 03 · EJECUTAMOS. Composición completa: sin recorte. -->
+        <figure class="clarity__media" data-reveal>
+          <img class="photo photo--dark" src="assets/images/resolvia-03-antes-durante-despues.jpg"
+               alt="Proceso de trabajo antes, durante y después de una intervención Resolvia"
+               width="1376" height="768" loading="lazy" decoding="async">
+        </figure>
+
+        <div class="phases">
+          <article class="phase" data-reveal>
+            <header class="phase__head">
+              <span class="phase__num">01</span>
+              <h3 class="phase__title">Antes</h3>
+            </header>
+            <ul class="phase__list" role="list">
+              <li>Alcance claro</li>
+              <li>Presupuesto</li>
+              <li>Actividades</li>
+              <li>Tiempos</li>
+              <li>Consideraciones</li>
+            </ul>
+          </article>
+
+          <article class="phase" data-reveal>
+            <header class="phase__head">
+              <span class="phase__num">02</span>
+              <h3 class="phase__title">Durante</h3>
+            </header>
+            <ul class="phase__list" role="list">
+              <li>Seguimiento</li>
+              <li>Avances</li>
+              <li>Evidencia fotográfica</li>
+              <li>Comunicación</li>
+              <li>Control de cambios</li>
+            </ul>
+          </article>
+
+          <article class="phase" data-reveal>
+            <header class="phase__head">
+              <span class="phase__num">03</span>
+              <h3 class="phase__title">Después</h3>
+            </header>
+            <ul class="phase__list" role="list">
+              <li>Validación</li>
+              <li>Evidencias</li>
+              <li>Entrega</li>
+              <li>Cierre</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="clarity__close" data-reveal>
+          <span>No queremos que tengas que perseguir a diferentes proveedores para saber qué está pasando.</span>
+          <strong>RESOLVIA coordina el trabajo y responde por el proyecto.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         QUALITY — Bien hecho también está en los detalles (pausa visual)
+         =================================================================== -->
+    <section class="quality section" id="detalles" aria-labelledby="quality-title">
+      <div class="container media-split media-split--image-first media-split--narrow-media">
+        <!-- IMAGEN 04 · CUIDAMOS LOS DETALLES -->
+        <figure class="media-split__media" data-reveal>
+          <img class="photo" src="assets/images/resolvia-04-detalle-bien-hecho.jpg"
+               alt="Detalle de ejecución y acabados durante un trabajo de Resolvia"
+               width="1376" height="768" loading="lazy" decoding="async">
+        </figure>
+        <div class="media-split__content">
+          <p class="eyebrow">Ejecución</p>
+          <h2 class="section-title section-title--md" id="quality-title" data-reveal>Bien hecho también está en los detalles.</h2>
+          <p class="media-split__text" data-reveal>
+            Cuidamos la ejecución, los acabados y los detalles que hacen que una solución realmente quede resuelta.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         VALUE PROPOSITION — Un problema. Un responsable. Una solución.
+         =================================================================== -->
+    <section class="statement section section--alt" id="enfoque" aria-labelledby="statement-title">
+      <div class="container media-split">
+        <div class="media-split__content">
+          <h2 class="statement__title" id="statement-title" data-reveal>
+            <span>Un problema.</span>
+            <span>Un responsable.</span>
+            <span class="statement__accent">Una solución.</span>
+          </h2>
+          <p class="lead statement__lead" data-reveal>
+            Coordinamos personas, actividades y especialistas para que tú tengas un solo punto de contacto.
+          </p>
+          <blockquote class="statement__quote" data-reveal>
+            <p>Resolver no es solamente ejecutar.</p>
+            <p>Es hacerse responsable de llegar al resultado.</p>
+          </blockquote>
+        </div>
+        <!-- IMAGEN 05 · RESPONDEMOS -->
+        <figure class="media-split__media" data-reveal>
+          <img class="photo" src="assets/images/resolvia-05-responsable-cliente.jpg"
+               alt="Responsable de Resolvia revisando el avance de un proyecto con un cliente"
+               width="1376" height="768" loading="lazy" decoding="async">
+        </figure>
       </div>
     </section>
 

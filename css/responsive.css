@@ -93,14 +93,30 @@
     padding-bottom: var(--space-5);
   }
 
+  /* Imagen 01 ≈ 50 % de la composición */
   .hero__grid {
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+  }
+
+  /* Imagen + contenido lado a lado */
+  .media-split {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: clamp(2.5rem, 5vw, 5rem);
   }
 
-  .hero__media .media-placeholder {
-    aspect-ratio: 4 / 5;
+  .media-split__media {
+    order: 0;
+  }
+
+  .media-split--image-first .media-split__media {
+    order: -1;
+  }
+
+  /* 40 % imagen / 60 % contenido */
+  .media-split--narrow-media {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
   }
 
   .hero__scroll {
@@ -125,13 +141,7 @@
 
   /* VALUE PROPOSITION */
   .statement__title {
-    font-size: clamp(2.4rem, 4.8vw, 5rem);
-  }
-
-  .statement__grid {
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
-    gap: var(--space-6);
-    align-items: end;
+    font-size: clamp(2.2rem, 4vw, 4.2rem);
   }
 
   /* CLARIDAD: tres momentos en columnas */
@@ -207,6 +217,11 @@
 @media (min-width: 900px) and (max-width: 1099px) {
   .docs {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Imagen 04: 50/50 para que no quede demasiado pequeña */
+  .media-split--narrow-media {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
 }
 

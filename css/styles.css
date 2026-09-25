@@ -193,6 +193,52 @@ body.is-locked {
   transform: scaleX(1);
 }
 
+/* Fotografías de marca: mismo tratamiento en todo el sitio.
+   Sin filtros ni overlays; relación de aspecto fija para evitar saltos (CLS). */
+.photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1376 / 768;
+  object-fit: contain;
+  background: var(--resolvia-beige);
+  border: 1px solid var(--resolvia-line);
+  border-radius: var(--radius);
+}
+
+.photo--dark {
+  background: var(--resolvia-charcoal-deep);
+  border-color: var(--resolvia-line-dark);
+}
+
+/* Imagen + contenido. En móvil: contenido primero, imagen después. */
+.media-split {
+  display: grid;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.media-split__media {
+  margin: 0;
+  order: 2;
+}
+
+.media-split__content {
+  min-width: 0;
+}
+
+.media-split__text {
+  max-width: 34rem;
+  margin-top: var(--space-3);
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.section-title--md {
+  font-size: clamp(1.9rem, 3.4vw, 3rem);
+}
+
 /* Placeholder de fotografía: claro, honesto, con retícula de plano */
 .media-placeholder {
   position: relative;
@@ -564,11 +610,7 @@ body.is-locked {
 
 .hero__media {
   position: relative;
-}
-
-.hero__media .media-placeholder {
-  aspect-ratio: 4 / 3;
-  border: 1px solid var(--resolvia-line);
+  margin: 0;
 }
 
 /* Marcas de corte en las esquinas (detalle de plano) */
@@ -596,74 +638,6 @@ body.is-locked {
   border-width: 0 1px 1px 0;
 }
 
-/* Dibujo de plano (placeholder del hero) */
-.plan {
-  width: 82%;
-  height: auto;
-  max-height: 92%;
-  overflow: visible;
-}
-
-.plan__wall {
-  fill: none;
-  stroke: var(--resolvia-charcoal);
-  stroke-width: 6;
-}
-
-.plan__part {
-  fill: none;
-  stroke: var(--resolvia-charcoal);
-  stroke-width: 3;
-}
-
-.plan__door {
-  fill: none;
-  stroke: var(--resolvia-gray);
-  stroke-width: 1;
-  stroke-dasharray: 3 3;
-}
-
-.plan__zone {
-  fill: rgba(217, 107, 39, 0.1);
-  stroke: var(--resolvia-orange);
-  stroke-width: 1.5;
-}
-
-.plan__check {
-  fill: none;
-  stroke: var(--resolvia-orange);
-  stroke-width: 5;
-  stroke-linecap: square;
-  stroke-dasharray: 70;
-  stroke-dashoffset: 70;
-  animation: draw 1s var(--ease) 0.9s forwards;
-}
-
-.plan__dim {
-  fill: none;
-  stroke: var(--resolvia-gray);
-  stroke-width: 1;
-}
-
-.plan__label,
-.plan__tag {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  fill: var(--resolvia-gray);
-}
-
-.plan__tag {
-  font-size: 12px;
-}
-
-.plan__tag--accent {
-  fill: var(--resolvia-orange-deep);
-}
-
-@keyframes draw {
-  to { stroke-dashoffset: 0; }
-}
-
 .hero__scroll {
   display: none;
 }
@@ -671,11 +645,6 @@ body.is-locked {
 /* ==========================================================================
    4. VALUE PROPOSITION — Un problema. Un responsable. Una solución.
    ========================================================================== */
-
-.statement__grid {
-  display: grid;
-  gap: var(--space-5);
-}
 
 .statement__title {
   display: flex;
@@ -691,11 +660,13 @@ body.is-locked {
   color: var(--resolvia-orange);
 }
 
-.statement__body {
-  display: grid;
-  align-content: end;
-  gap: var(--space-4);
-  max-width: 36rem;
+.statement__title {
+  margin-bottom: var(--space-4);
+}
+
+.statement__lead {
+  max-width: 34rem;
+  margin-bottom: var(--space-4);
 }
 
 .statement__quote {
@@ -973,6 +944,14 @@ body.is-locked {
 /* ==========================================================================
    8b. CONTROL — Documentos de seguimiento (maquetas en CSS)
    ========================================================================== */
+
+.control .media-split {
+  margin-bottom: clamp(3.5rem, 8vw, 6rem);
+}
+
+.clarity__media {
+  margin: 0 0 var(--space-5);
+}
 
 .docs {
   display: grid;
@@ -1798,10 +1777,6 @@ a.contact__row:hover {
   .js .cta__resolve {
     opacity: 1;
     transform: none;
-  }
-
-  .plan__check {
-    stroke-dashoffset: 0;
   }
 }
 

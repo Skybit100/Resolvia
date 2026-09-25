@@ -38,9 +38,11 @@ Este es un sitio estático: HTML, CSS y JavaScript sin frameworks. Funciona dire
     │   └── resolvia-logo-1200.png     Logo en alta resolución (datos estructurados)
     ├── images/
     │   ├── resolvia-og.jpg            Imagen para compartir en redes (1200×630)
-    │   ├── hero/                      Fotografía principal
-    │   ├── projects/                  Fotografías de casos
-    │   └── about/                     Fotografías de la sección Nosotros
+    │   ├── resolvia-01-hero-resolvemos.jpg        Imagen 01 · Hero
+    │   ├── resolvia-02-metodo-control.jpg         Imagen 02 · Seguimiento
+    │   ├── resolvia-03-antes-durante-despues.jpg  Imagen 03 · Claridad
+    │   ├── resolvia-04-detalle-bien-hecho.jpg     Imagen 04 · Detalles
+    │   └── resolvia-05-responsable-cliente.jpg    Imagen 05 · Un responsable
     └── icons/
         ├── icons.svg                  Sprite de iconos del sitio
         └── icon-192.png, icon-512.png
@@ -48,15 +50,16 @@ Este es un sitio estático: HTML, CSS y JavaScript sin frameworks. Funciona dire
 
 Cada sección en `index.html` y `styles.css` está marcada con un comentario en mayúsculas. Orden de la página (V1.1):
 
-1. `HERO`: Resolvemos. De principio a fin. + WhatsApp
+1. `HERO`: Resolvemos. De principio a fin. + WhatsApp (imagen 01)
 2. `SERVICES`: Qué resolvemos (4 pilares)
-3. `VALUE PROPOSITION`: Un problema. Un responsable. Una solución.
-4. `PROCESS`: El método RESOLVIA (6 etapas, `#metodo`)
-5. `TRUST`: Claridad antes, durante y después
-6. `CONTROL`: documentos de seguimiento (`#seguimiento`)
-7. `PROJECTS`: trabajos reales (desactivada, `#trabajos`)
-8. `CTA`: ¿Tienes algo que resolver?
-9. `CONTACT` y `FOOTER`
+3. `PROCESS`: El método RESOLVIA (6 etapas, `#metodo`)
+4. `CONTROL`: Así mantenemos tu proyecto bajo control (`#seguimiento`, imagen 02)
+5. `TRUST`: Claridad antes, durante y después (imagen 03)
+6. `QUALITY`: Bien hecho también está en los detalles (imagen 04)
+7. `VALUE PROPOSITION`: Un problema. Un responsable. Una solución. (imagen 05)
+8. `PROJECTS`: trabajos reales (desactivada, `#trabajos`)
+9. `CTA`: ¿Tienes algo que resolver?
+10. `CONTACT` y `FOOTER`
 
 **Logotipos:** todos salen del archivo oficial. Solo se recortó el fondo. La versión para fondo oscuro (`resolvia-light`) tiene el mismo dibujo, con el texto en blanco cálido. El escudo no se modificó.
 
@@ -73,17 +76,21 @@ Si cambias el título o la descripción del sitio, actualízalos también en:
 
 ---
 
-## 3. Cómo agregar fotografías
+## 3. Imágenes del sitio
 
-1. Exporta la foto en **WebP** (y de preferencia también en JPG como respaldo). Ancho recomendado: 1600 px para el hero y 1200 px para proyectos. Procura que cada archivo pese menos de 250 KB.
-   - Opciones gratuitas: [Squoosh](https://squoosh.app) o `cwebp -q 80 foto.jpg -o foto.webp`.
-2. Colócala en la carpeta que le corresponde (`assets/images/hero/`, `projects/` o `about/`). Usa nombres en minúsculas y sin espacios: `oficina-polanco-despues.webp`.
-3. **Hero:** en `index.html`, dentro de `<figure class="hero__media">`, sustituye el bloque `<div class="media-placeholder ...">…</div>` por el `<picture>` que aparece en el comentario justo arriba.
-4. Escribe siempre un `alt` que describa lo que se ve en la foto: *“Oficina remodelada con estaciones de trabajo y plafón nuevo”*.
-5. Indica `width` y `height` con las medidas reales de la imagen para que la página no “brinque” al cargar.
-6. Usa `loading="lazy"` en todas las fotos, excepto en la del hero.
+Las cinco imágenes de `assets/images/` son **conceptuales**: muestran cómo trabaja RESOLVIA, no son proyectos realizados. No las presentes como casos, clientes ni resultados reales.
 
-> Usa solo fotografías de obra real. Evita fotos de stock y renders.
+| Archivo | Sección | Carga |
+|---|---|---|
+| `resolvia-01-hero-resolvemos.jpg` | Hero | Prioritaria (`preload` + `fetchpriority="high"`, sin lazy) |
+| `resolvia-02-metodo-control.jpg` | Así mantenemos tu proyecto bajo control | `loading="lazy"` |
+| `resolvia-03-antes-durante-despues.jpg` | Claridad (antes, durante, después). Se muestra completa, sin recorte. | `loading="lazy"` |
+| `resolvia-04-detalle-bien-hecho.jpg` | Bien hecho también está en los detalles | `loading="lazy"` |
+| `resolvia-05-responsable-cliente.jpg` | Un problema. Un responsable. Una solución. | `loading="lazy"` |
+
+Todas miden 1376×768 y usan la clase `.photo` (mismo borde y proporción, sin filtros). Para reemplazar una, sube el nuevo archivo **con el mismo nombre** y las mismas medidas; si cambian las medidas, actualiza `width` y `height` en `index.html`.
+
+Reglas: escribe siempre un `alt` que describa la imagen, indica `width` y `height` reales, y usa `loading="lazy"` en todas menos la del hero.
 
 ---
 
