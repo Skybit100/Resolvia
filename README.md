@@ -201,9 +201,14 @@ El archivo `CNAME` ya contiene `resolvia.com.mx`.
 
 ---
 
-## Analítica (Google Analytics 4)
+## Analítica (Google Analytics 4 y Tag Manager)
 
-En el `<head>` de `index.html` hay un bloque comentado que dice `GOOGLE ANALYTICS - INSERT GA4 ID HERE`. Descoméntalo y reemplaza `G-XXXXXXXXXX` por tu Measurement ID. Al activarlo, actualiza la sección 7 del Aviso de privacidad.
+Todas las páginas (`index.html`, `privacidad.html`, `404.html`) cargan, al inicio del `<head>`:
+
+- **Google Analytics 4** directo con `gtag.js` (ID `G-RLTRF2SH0D`). Ya mide visitas y, con la medición mejorada, desplazamientos, clics y envíos de formulario.
+- **Google Tag Manager** (`GTM-WLSH32ZC`), más el `noscript` justo después de `<body>`, para agregar después otras etiquetas sin tocar el código.
+
+**Importante:** no crees una etiqueta de Google Analytics dentro de Tag Manager, porque se contarían las visitas dos veces. Si se agregan herramientas de publicidad, actualiza la sección 8 del Aviso de privacidad.
 
 ## Pendientes antes de lanzar
 
@@ -211,5 +216,5 @@ En el `<head>` de `index.html` hay un bloque comentado que dice `GOOGLE ANALYTIC
 - [ ] Primeros casos reales en Proyectos, con autorización del cliente.
 - [ ] Revisión legal del Aviso de privacidad (versión provisional con datos públicos de RESOLVIA).
 - [x] Endpoint del formulario (Formspree).
-- [ ] ID de Google Analytics 4 (opcional).
+- [x] Google Analytics 4 (G-RLTRF2SH0D) y Google Tag Manager (GTM-WLSH32ZC) instalados.
 - [ ] DNS de `resolvia.com.mx` y HTTPS.
