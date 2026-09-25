@@ -40,7 +40,7 @@ Este es un sitio estático: HTML, CSS y JavaScript sin frameworks. Funciona dire
     │   ├── resolvia-og.jpg            Imagen para compartir en redes (1200×630)
     │   ├── resolvia-01-hero-resolvemos.jpg        Imagen 01 · Hero
     │   ├── resolvia-02-metodo-control.jpg         Imagen 02 · Seguimiento
-    │   ├── resolvia-03-antes-durante-despues.jpg  Imagen 03 · Claridad
+    │   ├── Antes Durante y Despues.png         Proyecto real · Claridad
     │   ├── resolvia-04-detalle-bien-hecho.jpg     Imagen 04 · Detalles
     │   └── resolvia-05-responsable-cliente.jpg    Imagen 05 · Un responsable
     └── icons/
@@ -78,17 +78,17 @@ Si cambias el título o la descripción del sitio, actualízalos también en:
 
 ## 3. Imágenes del sitio
 
-Las cinco imágenes de `assets/images/` son **conceptuales**: muestran cómo trabaja RESOLVIA, no son proyectos realizados. No las presentes como casos, clientes ni resultados reales.
+La imagen de Claridad (`Antes Durante y Despues.png`) es de un **proyecto real** de RESOLVIA. Las otras cuatro (`resolvia-01`, `02`, `04` y `05`) son **conceptuales**: muestran cómo trabaja RESOLVIA y no deben presentarse como casos, clientes ni resultados reales.
 
 | Archivo | Sección | Carga |
 |---|---|---|
 | `resolvia-01-hero-resolvemos.jpg` | Hero | Prioritaria (`preload` + `fetchpriority="high"`, sin lazy) |
 | `resolvia-02-metodo-control.jpg` | Así mantenemos tu proyecto bajo control | `loading="lazy"` |
-| `resolvia-03-antes-durante-despues.jpg` | Claridad (antes, durante, después). Se muestra completa, sin recorte. | `loading="lazy"` |
+| `Antes Durante y Despues.png` | Claridad (antes, durante, después). **Proyecto real.** Se muestra completa, sin recorte (2017×780). | `loading="lazy"` |
 | `resolvia-04-detalle-bien-hecho.jpg` | Bien hecho también está en los detalles | `loading="lazy"` |
 | `resolvia-05-responsable-cliente.jpg` | Un problema. Un responsable. Una solución. | `loading="lazy"` |
 
-Todas miden 1376×768 y usan la clase `.photo` (mismo borde y proporción, sin filtros). Para reemplazar una, sube el nuevo archivo **con el mismo nombre** y las mismas medidas; si cambian las medidas, actualiza `width` y `height` en `index.html`.
+Las conceptuales miden 1376×768. Todas usan la clase `.photo` (mismo borde y proporción, sin filtros). Para reemplazar una, sube el nuevo archivo **con el mismo nombre** y las mismas medidas; si cambian las medidas, actualiza `width` y `height` en `index.html`.
 
 Reglas: escribe siempre un `alt` que describa la imagen, indica `width` y `height` reales, y usa `loading="lazy"` en todas menos la del hero.
 
